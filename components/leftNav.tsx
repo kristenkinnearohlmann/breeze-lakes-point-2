@@ -1,5 +1,12 @@
+import { Box, Flex } from "@chakra-ui/layout";
+
 const LeftNav = () => {
-  return <div>Left Nav</div>;
+  return (
+    <Box>
+      <Box>Dashboard</Box>
+      <Box>Admin</Box>
+    </Box>
+  );
 };
 
 export default LeftNav;

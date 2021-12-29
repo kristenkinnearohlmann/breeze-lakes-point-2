@@ -4,15 +4,19 @@ import LeftNav from "./leftNav";
 
 const AppLayout = ({ children }: { children: any }) => {
   return (
-    <Box>
-      <Box height="100px" width="100vw" bg="green">
+    <Box bg="black" color="white">
+      <Box height="90px" width="100vw">
         <TopNav></TopNav>
       </Box>
       <Flex>
-        <Box height="calc(100vh - 100px)" width="100px" bg="purple">
+        <Box height="calc(100vh - 90px)" width="200px" padding="10px">
           <LeftNav></LeftNav>
         </Box>
-        <Box height="calc(100vh - 100px)" width="calc(100vw - 100px)" bg="blue">
+        <Box
+          height="calc(100vh - 90px)"
+          width="calc(100vw - 200px)"
+          padding="10px"
+        >
           {children}
         </Box>
       </Flex>
