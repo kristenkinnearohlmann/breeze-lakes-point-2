@@ -4,7 +4,7 @@ import LeftNav from "./leftNav";
 
 const AppLayout = ({ children }: { children: any }) => {
   return (
-    <Box bg="black" color="white">
+    <Box bg="gray.600" color="white">
       <Box height="90px" width="100vw">
         <TopNav></TopNav>
       </Box>
