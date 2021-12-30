@@ -27,7 +27,12 @@ const navMenu = [
 
 const LeftNav = () => {
   return (
-    <Box height="calc(100vh - 90px)" width="200px" padding="10px" color="white">
+    <Box
+      height="calc(100vh - 90px)"
+      width="150px"
+      padding="20px 10px 0 0"
+      color="white"
+    >
       <List spacing={2}>
         {navMenu.map((menu) => (
           <ListItem paddingX="5px" fontSize="16px" key={menu.name}>

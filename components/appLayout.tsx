@@ -9,12 +9,12 @@ const AppLayout = ({ children }: { children: any }) => {
         <TopNav></TopNav>
       </Box>
       <Flex>
-        <Box height="calc(100vh - 90px)" width="200px" padding="10px">
+        <Box height="calc(100vh - 90px)" width="150px" padding="10px">
           <LeftNav></LeftNav>
         </Box>
         <Box
           height="calc(100vh - 90px)"
-          width="calc(100vw - 200px)"
+          width="calc(100vw - 150px)"
           padding="10px"
           overflow="auto"
         >
