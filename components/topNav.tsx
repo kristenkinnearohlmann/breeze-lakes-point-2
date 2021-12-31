@@ -9,7 +9,7 @@ const TopNav = () => {
           <NextImage src="/logo-small.png" height={97} width={80} />
         </Box>
         <Box>
-          <Text>Breeze Lakes Point</Text>
+          <Text fontSize="3xl">Breeze Lakes Point</Text>
         </Box>
       </Flex>
     </Box>
