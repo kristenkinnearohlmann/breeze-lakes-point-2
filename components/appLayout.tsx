@@ -14,6 +14,7 @@ const AppLayout = ({ children }: { children: any }) => {
         </Box>
         <Box
           bg="grey"
+          borderRadius="lg"
           height="calc(100vh - 90px)"
           width="calc(100vw - 150px)"
           padding="10px"
