@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/layout";
 
 const Dashboard = () => {
   return (
-    <Box bg="white" margin="20px" padding="20px" border="1px solid #dfdfdf">
+    <Box bg="white" margin="20px" border="1px solid #dfdfdf">
       <Box bg="grey" padding="20px">
         <Text paddingY="20px">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum

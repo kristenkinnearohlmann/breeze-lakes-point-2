@@ -13,11 +13,23 @@ const AppLayout = ({ children }: { children: any }) => {
           <LeftNav></LeftNav>
         </Box>
         <Box
-          bg="white"
+          bg="grey"
           height="calc(100vh - 90px)"
           width="calc(100vw - 150px)"
           padding="10px"
-          overflow="auto"
+          overflowY="auto"
+          css={{
+            "&::-webkit-scrollbar": {
+              width: "8px",
+            },
+            "&::-webkit-scrollbar-track": {
+              width: "10px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "blue",
+              borderRadius: "24px",
+            },
+          }}
         >
           {children}
         </Box>
