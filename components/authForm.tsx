@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Input, Button } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 const AuthForm = () => {
@@ -7,9 +7,13 @@ const AuthForm = () => {
       <Flex
         justify="center"
         align="center"
-        height="100px"
+        height="214px"
         borderBottom="white 1px solid"
-      ></Flex>
+        paddingX="10px"
+      >
+        <NextImage src="/logo.png" height={194} width={160} />
+        <Text fontSize="3xl">Breeze Lakes Point</Text>
+      </Flex>
     </Box>
   );
 };

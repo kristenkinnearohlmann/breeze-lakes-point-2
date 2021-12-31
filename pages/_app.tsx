@@ -22,9 +22,13 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <AppLayout>
+      {Component.authPage ? (
         <Component {...pageProps} />
-      </AppLayout>
+      ) : (
+        <AppLayout>
+          <Component {...pageProps} />
+        </AppLayout>
+      )}
     </ChakraProvider>
   );
 }
