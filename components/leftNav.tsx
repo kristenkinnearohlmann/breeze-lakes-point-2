@@ -10,13 +10,18 @@ import {
 } from "@chakra-ui/layout";
 import NextLink from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";
-import { RiAdminLine } from "react-icons/ri";
+import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
 
 const navMenu = [
   {
     name: "Dashboard",
     icon: AiOutlineDashboard,
     route: "/",
+  },
+  {
+    name: "Register",
+    icon: RiFileEditLine,
+    route: "/register",
   },
   {
     name: "Admin",
