@@ -20,13 +20,13 @@ const AppLayout = ({ children }: { children: any }) => {
           overflowY="auto"
           css={{
             "&::-webkit-scrollbar": {
-              width: "8px",
-            },
-            "&::-webkit-scrollbar-track": {
               width: "10px",
             },
+            "&::-webkit-scrollbar-track": {
+              width: "15px",
+            },
             "&::-webkit-scrollbar-thumb": {
-              background: "blue",
+              background: "darkgrey",
               borderRadius: "24px",
             },
           }}
