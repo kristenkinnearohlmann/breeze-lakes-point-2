@@ -15,7 +15,15 @@ const AuthForm = () => {
         <Text fontSize="3xl">Breeze Lakes Point</Text>
       </Flex>
       <Flex justify="center" align="center" height="calc(100vh - 215px)">
-        <Text>ph</Text>
+        <Box padding="50px" bg="gray.600" borderRadius="6px">
+          <form>
+            <Input mt="5px" placeholder="email or username" type="text" />
+            <Input mt="5px" placeholder="password" type="password" />
+            <Button mt="5px" type="submit" bg="blue.500">
+              phSubmit
+            </Button>
+          </form>
+        </Box>
       </Flex>
     </Box>
   );
