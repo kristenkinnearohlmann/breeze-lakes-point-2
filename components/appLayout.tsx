@@ -13,6 +13,7 @@ const AppLayout = ({ children }: { children: any }) => {
           <LeftNav></LeftNav>
         </Box>
         <Box
+          bg="white"
           height="calc(100vh - 90px)"
           width="calc(100vw - 150px)"
           padding="10px"
