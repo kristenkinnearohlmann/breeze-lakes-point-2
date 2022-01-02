@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import NextImage from "next/image";
 
-const AuthForm = ({ mode }) => {
+const AuthForm = ({ mode }: { mode: string }) => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
 
