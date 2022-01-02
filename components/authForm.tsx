@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import NextImage from "next/image";
 
-const AuthForm = () => {
+const AuthForm = ({ mode }) => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
 
@@ -48,7 +48,7 @@ const AuthForm = () => {
               </InputRightElement>
             </InputGroup>
             <Button mt="5px" type="submit" bg="blue.500">
-              phSubmit
+              {mode}
             </Button>
           </form>
         </Box>
