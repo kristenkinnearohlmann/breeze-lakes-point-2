@@ -70,7 +70,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
               </InputRightElement>
             </InputGroup>
             <Button mt="5px" type="submit" bg="blue.500" isLoading={isLoading}>
-              {mode}
+              {mode === "signin" ? "Sign In" : "Sign Up"}
             </Button>
           </form>
         </Box>
