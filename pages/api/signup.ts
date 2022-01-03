@@ -4,11 +4,8 @@ import cookie from "cookie";
 import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../lib/prisma";
 
-export default async (
-  req: NextApiRequest,
-  res: NextApiResponse,
-  { appSecret }: { appSecret: string }
-) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const appSecret: any = process.env.BREEZE_LAKES_POINT_SECRET;
   const salt = bcrypt.genSaltSync();
   const { username, password } = req.body;
 
@@ -49,14 +46,4 @@ export default async (
   );
 
   res.json(user);
-};
-
-export const getServerSideProps = async () => {
-  const appSecret = process.env.BREEZE_LAKES_POINT_SECRET;
-
-  return {
-    props: {
-      appSecret,
-    },
-  };
 };
