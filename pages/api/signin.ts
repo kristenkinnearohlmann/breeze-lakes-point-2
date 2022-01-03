@@ -4,11 +4,8 @@ import cookie from "cookie";
 import prisma from "../../lib/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async (
-  req: NextApiRequest,
-  res: NextApiResponse,
-  { appSecret }: { appSecret: string }
-) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const appSecret: any = process.env.BREEZE_LAKES_POINT_SECRET;
   const { username, password } = req.body;
 
   const user = await prisma.user.findUnique({
@@ -46,14 +43,4 @@ export default async (
     res.status(401);
     res.json({ error: "Username or Password is incorrect" });
   }
-};
-
-export const getServerSideProps = async () => {
-  const appSecret = process.env.BREEZE_LAKES_POINT_SECRET;
-
-  return {
-    props: {
-      appSecret,
-    },
-  };
 };
