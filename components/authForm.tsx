@@ -47,7 +47,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
           <form onSubmit={handleSubmit}>
             <Input
               mt="5px"
-              placeholder="email or username"
+              placeholder={mode === "signup" ? "email" : "email or username"}
               type="text"
               onChange={(e) => setUserName(e.target.value)}
             />
@@ -69,6 +69,13 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 </Button>
               </InputRightElement>
             </InputGroup>
+            {mode === "signup" ? (
+              <InputGroup>
+                <Input mt="5px" mr="2px" placeholder="first name" type="text" />
+                <Input mt="5px" ml="2px" placeholder="last name" type="text" />
+              </InputGroup>
+            ) : null}
+
             <Button mt="5px" type="submit" bg="blue.500" isLoading={isLoading}>
               {mode === "signin" ? "Sign In" : "Sign Up"}
             </Button>
