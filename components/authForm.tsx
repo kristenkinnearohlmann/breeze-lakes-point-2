@@ -3,9 +3,11 @@ import {
   Flex,
   Text,
   Input,
+  Checkbox,
   Button,
   InputGroup,
   InputRightElement,
+  useCheckbox,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { auth } from "../lib/mutations";
@@ -17,9 +19,14 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
+  const [checkedNoEmail, setCheckedNoEmail] = useState([]);
   const router = useRouter();
 
   const handleClick = () => setShow(!show);
+
+  const handleNoEmail = () => {
+    console.log("Check");
+  };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -45,12 +52,19 @@ const AuthForm = ({ mode }: { mode: any }) => {
       <Flex justify="center" align="center" height="calc(100vh - 215px)">
         <Box padding="50px" bg="gray.600" borderRadius="6px">
           <form onSubmit={handleSubmit}>
-            <Input
-              mt="5px"
-              placeholder={mode === "signup" ? "email" : "email or username"}
-              type="text"
-              onChange={(e) => setUserName(e.target.value)}
-            />
+            <InputGroup>
+              <Input
+                mt="5px"
+                placeholder={mode === "signup" ? "email" : "email or username"}
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+              />
+              {mode === "signup" ? (
+                <Checkbox ml="2px" onChange={handleNoEmail()}>
+                  No email address
+                </Checkbox>
+              ) : null}
+            </InputGroup>
             <InputGroup size="md" marginTop="5px">
               <Input
                 pr="4.5rem"
