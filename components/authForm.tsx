@@ -70,7 +70,11 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 </Checkbox>
               ) : null}
             </InputGroup>
-            {checkedNoEmail ? "Show username" : null}
+            {mode === "signup" ? (
+              checkedNoEmail ? (
+                <Input mt="5px" placeholder="username" type="text" />
+              ) : null
+            ) : null}
             <InputGroup size="md" marginTop="5px">
               <Input
                 pr="4.5rem"
