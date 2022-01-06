@@ -20,6 +20,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [checkedNoEmail, setCheckedNoEmail] = useState(false);
+  const [emailDisabled, setEmailDisabled] = useState(false);
   const router = useRouter();
 
   const handleClick = () => setShow(!show);
@@ -28,6 +29,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
     console.log("Check");
     console.log(e.target.checked);
     setCheckedNoEmail(e.target.checked);
+    setEmailDisabled(e.target.checked);
   };
 
   const handleSubmit = async (e: any) => {
@@ -60,6 +62,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 placeholder={mode === "signup" ? "email" : "email or username"}
                 type="text"
                 onChange={(e) => setUserName(e.target.value)}
+                disabled={emailDisabled}
               />
               {mode === "signup" ? (
                 <Checkbox ml="2px" onChange={(e) => handleNoEmail(e)}>
