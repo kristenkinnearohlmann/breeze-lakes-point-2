@@ -17,6 +17,9 @@ import NextImage from "next/image";
 const AuthForm = ({ mode }: { mode: any }) => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmil] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [checkedNoEmail, setCheckedNoEmail] = useState(false);
@@ -26,8 +29,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const handleClick = () => setShow(!show);
 
   const handleNoEmail = (e) => {
-    console.log("Check");
-    console.log(e.target.checked);
     setCheckedNoEmail(e.target.checked);
     setEmailDisabled(e.target.checked);
   };
@@ -36,8 +37,19 @@ const AuthForm = ({ mode }: { mode: any }) => {
     e.preventDefault();
     setIsLoading(true);
 
-    const user = await auth(mode, { username, password });
-    setIsLoading(false);
+    if (mode === "signin") {
+      const user = await auth(mode, { username, password });
+      setIsLoading(false);
+    } else {
+      const user = await auth(mode, {
+        username,
+        password,
+        email,
+        firstName,
+        lastName,
+      });
+    }
+
     router.push("/");
   };
 
