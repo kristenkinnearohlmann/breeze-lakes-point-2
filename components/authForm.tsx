@@ -19,7 +19,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
-  const [checkedNoEmail, setCheckedNoEmail] = useState([]);
+  const [checkedNoEmail, setCheckedNoEmail] = useState(false);
   const router = useRouter();
 
   const handleClick = () => setShow(!show);
@@ -27,6 +27,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const handleNoEmail = (e) => {
     console.log("Check");
     console.log(e.target.checked);
+    setCheckedNoEmail(e.target.checked);
   };
 
   const handleSubmit = async (e: any) => {
@@ -66,6 +67,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 </Checkbox>
               ) : null}
             </InputGroup>
+            {checkedNoEmail ? "Show username" : null}
             <InputGroup size="md" marginTop="5px">
               <Input
                 pr="4.5rem"
