@@ -24,8 +24,9 @@ const AuthForm = ({ mode }: { mode: any }) => {
 
   const handleClick = () => setShow(!show);
 
-  const handleNoEmail = () => {
+  const handleNoEmail = (e) => {
     console.log("Check");
+    console.log(e.target.checked);
   };
 
   const handleSubmit = async (e: any) => {
@@ -60,7 +61,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 onChange={(e) => setUserName(e.target.value)}
               />
               {mode === "signup" ? (
-                <Checkbox ml="2px" onChange={handleNoEmail()}>
+                <Checkbox ml="2px" onChange={(e) => handleNoEmail(e)}>
                   No email address
                 </Checkbox>
               ) : null}
