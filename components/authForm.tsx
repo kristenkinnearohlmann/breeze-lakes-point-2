@@ -7,11 +7,11 @@ import {
   Button,
   InputGroup,
   InputRightElement,
-  useCheckbox,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { auth } from "../lib/mutations";
 import { useState } from "react";
+import NextLink from "next/link";
 import NextImage from "next/image";
 
 const AuthForm = ({ mode }: { mode: any }) => {
@@ -140,6 +140,23 @@ const AuthForm = ({ mode }: { mode: any }) => {
             <Button mt="5px" type="submit" bg="blue.500" isLoading={isLoading}>
               {mode === "signin" ? "Sign In" : "Sign Up"}
             </Button>
+            {mode === "signin" ? (
+              <Text marginTop="5px" fontSize="sm">
+                Don't have an account?{" "}
+                <NextLink href="/signup" passHref>
+                  Sign up
+                </NextLink>{" "}
+                to register.
+              </Text>
+            ) : (
+              <Text marginTop="5px" fontSize="sm">
+                Have an account?{" "}
+                <NextLink href="/signin" passHref>
+                  Sign in
+                </NextLink>{" "}
+                to manage your profile and registration.
+              </Text>
+            )}
           </form>
         </Box>
       </Flex>
