@@ -23,6 +23,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [checkedNoEmail, setCheckedNoEmail] = useState(false);
+  const [checkNoEmailDisabled, setCheckNoEmailDisabled] = useState(false);
   const [emailDisabled, setEmailDisabled] = useState(false);
   const router = useRouter();
 
@@ -81,11 +82,16 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 onChange={(e) => {
                   setUserName(e.target.value);
                   setEmail(e.target.value);
+                  setCheckNoEmailDisabled(true);
                 }}
                 disabled={emailDisabled}
               />
               {mode === "signup" ? (
-                <Checkbox ml="2px" onChange={(e) => handleNoEmail(e)}>
+                <Checkbox
+                  ml="2px"
+                  onChange={(e) => handleNoEmail(e)}
+                  isDisabled={checkNoEmailDisabled}
+                >
                   No email address
                 </Checkbox>
               ) : null}
