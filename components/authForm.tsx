@@ -39,21 +39,16 @@ const AuthForm = ({ mode }: { mode: any }) => {
     setIsLoading(true);
 
     if (mode === "signin") {
-      // const user = await auth(mode, { username, password });
+      const user = await auth(mode, { username, password });
       setIsLoading(false);
     } else {
-      if (checkedNoEmail === false) {
-      }
-
-      console.log(username, password, email, firstName, lastName);
-
-      // const user = await auth(mode, {
-      //   username,
-      //   password,
-      //   email,
-      //   firstName,
-      //   lastName,
-      // });
+      const user = await auth(mode, {
+        username,
+        password,
+        email,
+        firstName,
+        lastName,
+      });
     }
 
     // router.push("/");
