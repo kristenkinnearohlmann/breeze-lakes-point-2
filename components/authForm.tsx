@@ -40,7 +40,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
 
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
-      setIsLoading(false);
     } else {
       const user = await auth(mode, {
         username,
@@ -50,8 +49,8 @@ const AuthForm = ({ mode }: { mode: any }) => {
         lastName,
       });
     }
-
-    // router.push("/");
+    setIsLoading(false);
+    router.push("/");
   };
 
   return (
