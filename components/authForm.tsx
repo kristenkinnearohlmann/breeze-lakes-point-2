@@ -17,7 +17,7 @@ import NextImage from "next/image";
 const AuthForm = ({ mode }: { mode: any }) => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmil] = useState("");
+  const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -38,19 +38,24 @@ const AuthForm = ({ mode }: { mode: any }) => {
     setIsLoading(true);
 
     if (mode === "signin") {
-      const user = await auth(mode, { username, password });
+      // const user = await auth(mode, { username, password });
       setIsLoading(false);
     } else {
-      const user = await auth(mode, {
-        username,
-        password,
-        email,
-        firstName,
-        lastName,
-      });
+      if (checkedNoEmail === false) {
+      }
+
+      console.log(username, password, email, firstName, lastName);
+
+      // const user = await auth(mode, {
+      //   username,
+      //   password,
+      //   email,
+      //   firstName,
+      //   lastName,
+      // });
     }
 
-    router.push("/");
+    // router.push("/");
   };
 
   return (
@@ -73,7 +78,10 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 mt="5px"
                 placeholder={mode === "signup" ? "email" : "email or username"}
                 type="text"
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                  setEmail(e.target.value);
+                }}
                 disabled={emailDisabled}
               />
               {mode === "signup" ? (
@@ -84,7 +92,12 @@ const AuthForm = ({ mode }: { mode: any }) => {
             </InputGroup>
             {mode === "signup" ? (
               checkedNoEmail ? (
-                <Input mt="5px" placeholder="username" type="text" />
+                <Input
+                  mt="5px"
+                  placeholder="username"
+                  type="text"
+                  onChange={(e) => setUserName(e.target.value)}
+                />
               ) : null
             ) : null}
             <InputGroup size="md" marginTop="5px">
@@ -107,8 +120,20 @@ const AuthForm = ({ mode }: { mode: any }) => {
             </InputGroup>
             {mode === "signup" ? (
               <InputGroup>
-                <Input mt="5px" mr="2px" placeholder="first name" type="text" />
-                <Input mt="5px" ml="2px" placeholder="last name" type="text" />
+                <Input
+                  mt="5px"
+                  mr="2px"
+                  placeholder="first name"
+                  type="text"
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <Input
+                  mt="5px"
+                  ml="2px"
+                  placeholder="last name"
+                  type="text"
+                  onChange={(e) => setLastName(e.target.value)}
+                />
               </InputGroup>
             ) : null}
 
