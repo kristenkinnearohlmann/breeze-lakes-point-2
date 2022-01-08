@@ -14,11 +14,6 @@ import { auth } from "../lib/mutations";
 import { useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import styled from "styled-components";
-
-const BoldLink = styled.a`
-  font-weight: bold;
-`;
 
 const AuthForm = ({ mode }: { mode: any }) => {
   const [username, setUserName] = useState("");
@@ -149,9 +144,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
             {mode === "signin" ? (
               <Text marginTop="5px" fontSize="sm">
                 Don't have an account?{" "}
-                {/* <NextLink href="/signup" passHref>
-                  <BoldLink>Sign up</BoldLink>
-                </NextLink>{" "} */}
                 <Link href="/signup" fontWeight="bold">
                   Sign up
                 </Link>{" "}
@@ -160,9 +152,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
             ) : (
               <Text marginTop="5px" fontSize="sm">
                 Have an account?{" "}
-                {/* <NextLink href="/signin" passHref>
-                  <BoldLink>Sign in</BoldLink>
-                </NextLink>{" "} */}
                 <Link href="/signin" fontWeight="bold">
                   Sign in
                 </Link>{" "}
