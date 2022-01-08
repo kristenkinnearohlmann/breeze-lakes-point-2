@@ -28,6 +28,11 @@ const navMenu = [
     icon: RiAdminLine,
     route: "/",
   },
+  {
+    name: "Sign Out",
+    icon: RiFileEditLine,
+    route: "/signout",
+  },
 ];
 
 const LeftNav = () => {
