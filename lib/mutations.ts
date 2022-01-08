@@ -12,3 +12,7 @@ export const auth = (
 ) => {
   return fetcher(`/${mode}`, body);
 };
+
+export const signout = (mode: "signout") => {
+  return fetcher(`/${mode}`);
+};
