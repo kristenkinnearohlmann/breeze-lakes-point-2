@@ -38,7 +38,6 @@ const LeftNav = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log("In logout click");
 
     const response = await signout("signout");
     router.push("/signin");

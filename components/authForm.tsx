@@ -7,6 +7,7 @@ import {
   Button,
   InputGroup,
   InputRightElement,
+  Link,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { auth } from "../lib/mutations";
@@ -148,17 +149,23 @@ const AuthForm = ({ mode }: { mode: any }) => {
             {mode === "signin" ? (
               <Text marginTop="5px" fontSize="sm">
                 Don't have an account?{" "}
-                <NextLink href="/signup" passHref>
+                {/* <NextLink href="/signup" passHref>
                   <BoldLink>Sign up</BoldLink>
-                </NextLink>{" "}
+                </NextLink>{" "} */}
+                <Link href="/signup" fontWeight="bold">
+                  Sign up
+                </Link>{" "}
                 to register.
               </Text>
             ) : (
               <Text marginTop="5px" fontSize="sm">
                 Have an account?{" "}
-                <NextLink href="/signin" passHref>
+                {/* <NextLink href="/signin" passHref>
                   <BoldLink>Sign in</BoldLink>
-                </NextLink>{" "}
+                </NextLink>{" "} */}
+                <Link href="/signin" fontWeight="bold">
+                  Sign in
+                </Link>{" "}
                 to manage your profile and registration.
               </Text>
             )}
