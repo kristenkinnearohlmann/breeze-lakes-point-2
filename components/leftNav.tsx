@@ -8,9 +8,12 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
+import { signout } from "../lib/mutations";
+import { useRouter } from "next/router";
 
 const navMenu = [
   {
@@ -28,14 +31,19 @@ const navMenu = [
     icon: RiAdminLine,
     route: "/",
   },
-  {
-    name: "Sign Out",
-    icon: RiFileEditLine,
-    route: "/signout",
-  },
 ];
 
 const LeftNav = () => {
+  const router = useRouter();
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    console.log("In logout click");
+
+    const response = await signout("signout");
+    router.push("/signin");
+  };
+
   return (
     <Box
       height="calc(100vh - 90px)"
@@ -57,6 +65,11 @@ const LeftNav = () => {
           </ListItem>
         ))}
       </List>
+      <Box>
+        <form onSubmit={handleSubmit}>
+          <Button type="submit">Sign Out</Button>
+        </form>
+      </Box>
     </Box>
   );
 };
