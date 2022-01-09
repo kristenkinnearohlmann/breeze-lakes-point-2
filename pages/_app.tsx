@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import AppLayout from "../components/appLayout";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "../styles/globals.css";
 
 const theme = extendTheme({
   colors: {
