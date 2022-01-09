@@ -8,9 +8,11 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/layout";
+import { IconButton } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";
+import { MdOutlineLogout } from "react-icons/md";
 import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
 import { signout } from "../lib/mutations";
 import { useRouter } from "next/router";
@@ -66,6 +68,12 @@ const LeftNav = () => {
       </List>
       <Box>
         <form onSubmit={handleSubmit}>
+          <IconButton
+            aria-label="Sign out"
+            icon={<MdOutlineLogout />}
+            bg="transparent"
+            border="1px solid black"
+          />
           <Button type="submit">Sign Out</Button>
         </form>
       </Box>
