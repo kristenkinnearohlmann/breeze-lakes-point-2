@@ -1,11 +1,13 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import TopNav from "./topNav";
 import LeftNav from "./leftNav";
+import Dashboard from "./dashboard";
 import { useMe } from "../lib/hooks";
 
 const AppLayout = ({ children }: { children: any }) => {
   const { user } = useMe();
   console.log(user);
+
   return (
     <Box bg="gray.600" color="white">
       <Box height="90px" width="100vw">
@@ -35,7 +37,9 @@ const AppLayout = ({ children }: { children: any }) => {
             },
           }}
         >
-          {children}
+          {/* {children} */}
+          <Box>{`${user.firstName} ${user.lastName}`}</Box>
+          <Dashboard user={user}></Dashboard>
         </Box>
       </Flex>
     </Box>
