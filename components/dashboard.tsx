@@ -1,10 +1,16 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
 
 const Dashboard = ({ user }: { user: any }) => {
+  const { firstName, lastName } = user;
+
   return (
     <Box bg="white" margin="20px" border="1px solid #dfdfdf">
       <Box bg="grey" padding="20px">
-        <Box>{`${user.firstName} ${user.lastName}`}</Box>
+        <Box>
+          <Text>
+            {firstName} {lastName}
+          </Text>
+        </Box>
         <Text paddingY="20px">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           euismod, justo eu eleifend rhoncus, erat tellus viverra sem, dictum
