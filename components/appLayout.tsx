@@ -6,7 +6,6 @@ import { useMe } from "../lib/hooks";
 
 const AppLayout = ({ children }: { children: any }) => {
   const { user } = useMe();
-  const { firstName, lastName } = user;
 
   return (
     <Box bg="gray.600" color="white">
@@ -39,7 +38,7 @@ const AppLayout = ({ children }: { children: any }) => {
         >
           <Box>
             <Text fontSize="3xl">
-              Welcome, {firstName} {lastName}
+              Welcome, {user?.firstName} {user?.lastName}
             </Text>
           </Box>
           <Dashboard user={user}></Dashboard>
