@@ -22,15 +22,11 @@ model User {
   lastName  String
   role      Role     @relation(fields: [roleId], references: [id])
   roleId    String
-  isActive  Boolean  @default(true)
 }
 
 model Role {
-  id          String   @id @default(uuid())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  roleName    String
-  description String
-  isActive    Boolean  @default(true)
-  User        User[]
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User      User[]
 }
