@@ -5,7 +5,7 @@ CREATE TABLE "User" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "username" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "email" TEXT NOT NULL,
+    "email" TEXT,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
 
