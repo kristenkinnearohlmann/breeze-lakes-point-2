@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions"]
 }
 
 datasource db {
@@ -21,6 +22,11 @@ model User {
   firstName String
   lastName  String
   role      Role     @default(User)
+}
+
+model Schedule {
+  id   String @id @default(uuid())
+  name String
 }
 
 enum Role {
