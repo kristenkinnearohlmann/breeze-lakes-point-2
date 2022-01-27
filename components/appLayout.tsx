@@ -38,7 +38,7 @@ const AppLayout = ({ children }: { children: any }) => {
         >
           <Box>
             <Text fontSize="3xl">
-              Welcome, {user?.firstName} {user?.lastName}
+              {user?.firstName} {user?.lastName}
             </Text>
             <Text fontSize="medium">{user?.role}</Text>
           </Box>
