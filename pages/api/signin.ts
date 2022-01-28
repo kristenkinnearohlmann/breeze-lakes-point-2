@@ -7,17 +7,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const appSecret: any = process.env.BREEZE_LAKES_POINT_SECRET;
   const { username, password } = req.body;
-  console.log(appSecret);
-  console.log(username);
-  console.log(password);
 
   const user = await prisma.user.findUnique({
     where: {
       username: username,
     },
   });
-
-  console.log(user);
 
   if (user && bcrypt.compareSync(password, user.password)) {
     const token = jwt.sign(

@@ -7,6 +7,7 @@ const Dashboard = ({ user }: { user: any }) => {
         <Box>
           <Text>Welcome {user?.firstName}!</Text>
         </Box>
+        <Text>You have arrived!</Text>
         <Text paddingY="20px">
           This is the main dashboard where items will appear depending on the
           user logging in.
