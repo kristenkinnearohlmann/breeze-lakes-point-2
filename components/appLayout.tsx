@@ -1,51 +1,67 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
+import Head from "next/head";
+import HeadMeta from "../pages/partials/headMeta";
 import TopNav from "./topNav";
 import LeftNav from "./leftNav";
 import Dashboard from "./dashboard";
 import { useMe } from "../lib/hooks";
 
-const AppLayout = ({ children }: { children: any }) => {
+const AppLayout = ({
+  children,
+  title = "Breeze Lakes Point",
+}: {
+  children: any;
+  title: string;
+}) => {
   const { user } = useMe();
 
   return (
-    <Box bg="gray.600" color="white">
-      <Box height="90px" width="100vw">
-        <TopNav></TopNav>
-      </Box>
-      <Flex>
-        <Box height="calc(100vh - 90px)" width="150px" padding="10px">
-          <LeftNav></LeftNav>
+    <div>
+      {/* <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head> */}
+      <HeadMeta />
+      <Box bg="gray.600" color="white">
+        <Box height="90px" width="100vw">
+          <TopNav></TopNav>
         </Box>
-        <Box
-          bg="grey"
-          borderRadius="lg"
-          height="calc(100vh - 90px)"
-          width="calc(100vw - 150px)"
-          padding="10px"
-          overflowY="auto"
-          css={{
-            "&::-webkit-scrollbar": {
-              width: "10px",
-            },
-            "&::-webkit-scrollbar-track": {
-              width: "15px",
-            },
-            "&::-webkit-scrollbar-thumb": {
-              background: "darkgrey",
-              borderRadius: "24px",
-            },
-          }}
-        >
-          <Box>
-            <Text fontSize="3xl">
-              {user?.firstName} {user?.lastName}
-            </Text>
-            <Text fontSize="medium">{user?.role}</Text>
+        <Flex>
+          <Box height="calc(100vh - 90px)" width="150px" padding="10px">
+            <LeftNav></LeftNav>
           </Box>
-          <Dashboard user={user}></Dashboard>
-        </Box>
-      </Flex>
-    </Box>
+          <Box
+            bg="grey"
+            borderRadius="lg"
+            height="calc(100vh - 90px)"
+            width="calc(100vw - 150px)"
+            padding="10px"
+            overflowY="auto"
+            css={{
+              "&::-webkit-scrollbar": {
+                width: "10px",
+              },
+              "&::-webkit-scrollbar-track": {
+                width: "15px",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                background: "darkgrey",
+                borderRadius: "24px",
+              },
+            }}
+          >
+            <Box>
+              <Text fontSize="3xl">
+                {user?.firstName} {user?.lastName}
+              </Text>
+              <Text fontSize="medium">{user?.role}</Text>
+            </Box>
+            <Dashboard user={user}></Dashboard>
+          </Box>
+        </Flex>
+      </Box>
+    </div>
   );
 };
 
