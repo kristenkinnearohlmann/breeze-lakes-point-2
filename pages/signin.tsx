@@ -4,7 +4,7 @@ import HeadMeta from "./partials/headMeta";
 const Signin = () => {
   return (
     <div>
-      <HeadMeta subtitle="Sign In"></HeadMeta>
+      <HeadMeta subtitle="Sign In" />
       <AuthForm mode="signin" />
     </div>
   );

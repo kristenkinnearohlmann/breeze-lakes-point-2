@@ -1,27 +1,15 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import Head from "next/head";
 import HeadMeta from "../pages/partials/headMeta";
 import TopNav from "./topNav";
 import LeftNav from "./leftNav";
 import Dashboard from "./dashboard";
 import { useMe } from "../lib/hooks";
 
-const AppLayout = ({
-  children,
-  title = "Breeze Lakes Point",
-}: {
-  children: any;
-  title: string;
-}) => {
+const AppLayout = ({ children }: { children: any }) => {
   const { user } = useMe();
 
   return (
     <div>
-      {/* <Head>
-        <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head> */}
       <HeadMeta />
       <Box bg="gray.600" color="white">
         <Box height="90px" width="100vw">

@@ -1,7 +1,13 @@
 import AuthForm from "../components/authForm";
+import HeadMeta from "../pages/partials/headMeta";
 
 const Signup = () => {
-  return <AuthForm mode="signup" />;
+  return (
+    <div>
+      <HeadMeta subtitle="Sign Up" />
+      <AuthForm mode="signup" />
+    </div>
+  );
 };
 
 Signup.authPage = true;
