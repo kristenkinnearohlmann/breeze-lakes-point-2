@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 import HeadMeta from "../pages/partials/headMeta";
 
 const Dashboard = ({ user }: { user: any }) => {

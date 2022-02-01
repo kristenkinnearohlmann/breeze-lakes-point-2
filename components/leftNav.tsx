@@ -3,12 +3,10 @@ import {
   List,
   ListItem,
   ListIcon,
-  Divider,
-  Center,
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/layout";
-import { Icon, IconButton } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";

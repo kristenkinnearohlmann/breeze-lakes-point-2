@@ -1,13 +1,9 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Box, Flex } from "@chakra-ui/layout";
 import HeadMeta from "../pages/partials/headMeta";
 import TopNav from "./topNav";
 import LeftNav from "./leftNav";
-import Dashboard from "./dashboard";
-import { useMe } from "../lib/hooks";
 
 const AppLayout = ({ children }: { children: any }) => {
-  const { user } = useMe();
-
   return (
     <div>
       <HeadMeta />
@@ -39,13 +35,7 @@ const AppLayout = ({ children }: { children: any }) => {
               },
             }}
           >
-            <Box>
-              <Text fontSize="3xl">
-                {user?.firstName} {user?.lastName}
-              </Text>
-              <Text fontSize="medium">{user?.role}</Text>
-            </Box>
-            <Dashboard user={user}></Dashboard>
+            <Box>{children}</Box>
           </Box>
         </Flex>
       </Box>
