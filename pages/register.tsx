@@ -7,15 +7,10 @@ const Register = () => {
 
   return (
     <div>
-      {/* {" "}
-      <Box>
-        <Text fontSize="3xl">
-          {user?.firstName} {user?.lastName}
-        </Text>
-        <Text fontSize="medium">{user?.role}</Text>
-      </Box> */}
       <UserHeader user={user}></UserHeader>
-      <Box>Register here</Box>
+      <Box>
+        <Text>Register here to participate.</Text>
+      </Box>
     </div>
   );
 };

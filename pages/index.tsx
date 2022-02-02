@@ -1,6 +1,7 @@
 import { Box, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import Dashboard from "../components/dashboard";
+import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
 
 const Home: NextPage = () => {
@@ -8,12 +9,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Box>
-        <Text fontSize="3xl">
-          {user?.firstName} {user?.lastName}
-        </Text>
-        <Text fontSize="medium">{user?.role}</Text>
-      </Box>
+      <UserHeader user={user}></UserHeader>
       <Dashboard user={user}></Dashboard>
     </div>
   );

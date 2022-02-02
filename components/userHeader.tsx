@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text, Divider } from "@chakra-ui/layout";
 
 const UserHeader = ({ user }: { user: any }) => {
   return (
@@ -7,6 +7,7 @@ const UserHeader = ({ user }: { user: any }) => {
         {user?.firstName} {user?.lastName}
       </Text>
       <Text fontSize="medium">{user?.role}</Text>
+      <Divider />
     </Box>
   );
 };
