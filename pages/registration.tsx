@@ -6,12 +6,14 @@ import { useMe } from "../lib/hooks";
 
 const Registration = () => {
   const { user } = useMe();
-
+  console.log(user);
   return (
     <div>
       <UserHeader user={user}></UserHeader>
+      <Box paddingBottom="15px">
+        <Text>Complete or review your registration information.</Text>
+      </Box>
       <Box>
-        <Text>Register here to participate.</Text>
         <form>
           <FormControl isRequired>
             <FormLabel htmlFor="first-name">First name</FormLabel>
