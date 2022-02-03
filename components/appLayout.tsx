@@ -35,7 +35,7 @@ const AppLayout = ({ children }: { children: any }) => {
               },
             }}
           >
-            <Box>{children}</Box>
+            <Box padding="10px 0 0 10px">{children}</Box>
           </Box>
         </Flex>
       </Box>
