@@ -2,11 +2,11 @@ import { Box, Text, Divider } from "@chakra-ui/layout";
 
 const UserHeader = ({ user }: { user: any }) => {
   return (
-    <Box>
+    <Box padding="0 0 15px 0">
       <Text fontSize="3xl">
         {user?.firstName} {user?.lastName}
       </Text>
-      <Text fontSize="medium">{user?.role}</Text>
+      <Text fontSize="large">{user?.role}</Text>
       <Divider />
     </Box>
   );
