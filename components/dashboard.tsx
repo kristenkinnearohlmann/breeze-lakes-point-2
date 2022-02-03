@@ -5,7 +5,7 @@ const Dashboard = ({ user }: { user: any }) => {
   return (
     <div>
       <HeadMeta subtitle="Dashboard" />
-      <Box bg="white" margin="20px" border="1px solid #dfdfdf">
+      <Box bg="white" border="1px solid #dfdfdf">
         <Box bg="grey" padding="20px">
           <Box>
             <Text>Welcome {user?.firstName}!</Text>
