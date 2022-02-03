@@ -22,9 +22,9 @@ const navMenu = [
     route: "/",
   },
   {
-    name: "Register",
+    name: "Registration",
     icon: RiFileEditLine,
-    route: "/register",
+    route: "/registration",
   },
   {
     name: "Admin",

@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/layout";
 import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
 
-const Register = () => {
+const Registration = () => {
   const { user } = useMe();
 
   return (
@@ -15,4 +15,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Registration;
