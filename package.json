@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/form-control": "^1.5.2",
     "@chakra-ui/layout": "^1.6.0",
     "@chakra-ui/react": "^1.7.3",
     "@prisma/client": "^3.7.0",
