@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Input } from "@chakra-ui/react";
+// import { Input } from "@chakra-ui/react";
 import { Formik } from "formik";
-import { FormControl, FormLabel } from "@chakra-ui/form-control";
+// import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
@@ -77,6 +77,7 @@ const Registration = () => {
 
   const initialValues = {
     firstName: user.firstName,
+    middleName: "",
     lastName: user.lastName,
     preferredName: "",
   };
@@ -84,13 +85,14 @@ const Registration = () => {
   console.log(initialValues);
   const validationSchema = Yup.object({
     firstName: Yup.string().required(),
+    middleName: Yup.string(),
     lastName: Yup.string().required(),
     preferredName: Yup.string(),
   });
 
   const onSubmit = (values) => {
     event.preventDefault;
-    console.log("In Submit");
+    console.log("Submitted values");
     console.log(values);
   };
 
@@ -117,6 +119,12 @@ const Registration = () => {
                   marginRight="10px"
                 />
                 <InputControl
+                  id="middleName"
+                  name="middleName"
+                  label="Middle name"
+                  marginRight="10px"
+                />
+                <InputControl
                   isRequired
                   id="lastName"
                   name="lastName"
@@ -129,7 +137,9 @@ const Registration = () => {
                   label="Preferred name"
                 />
               </Flex>
-              <SubmitButton>Submit</SubmitButton>
+              <Box paddingTop="10px">
+                <SubmitButton>Submit</SubmitButton>
+              </Box>
             </Box>
           )}
         </Formik>
