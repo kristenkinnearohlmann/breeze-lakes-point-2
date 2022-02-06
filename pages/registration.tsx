@@ -1,18 +1,12 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
-// import { Input } from "@chakra-ui/react";
 import { Formik } from "formik";
-// import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
-// import { EventEmitter } from "stream";
-// import { eventNames } from "process";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
-import { getEnvironmentData } from "worker_threads";
 
 const Registration = () => {
   const { user } = useMe();
-  console.log(user);
 
   const stateAbbrevs = [
     "AL",
@@ -76,12 +70,7 @@ const Registration = () => {
     "WY",
   ];
 
-  console.log(user?.firstName || "");
   const initialValues = {
-    // firstName: user.firstName || null,
-    // middleName: null,
-    // lastName: user.lastName || null,
-    // preferredName: null,
     firstName: "",
     middleName: "",
     lastName: "",
@@ -97,7 +86,6 @@ const Registration = () => {
 
   const getData = () => (user?.id ? userValues : initialValues);
 
-  console.log(initialValues);
   const validationSchema = Yup.object({
     firstName: Yup.string().required(),
     middleName: Yup.string(),
