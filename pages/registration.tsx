@@ -5,8 +5,8 @@ import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
-import { EventEmitter } from "stream";
-import { eventNames } from "process";
+// import { EventEmitter } from "stream";
+// import { eventNames } from "process";
 import { InputControl } from "formik-chakra-ui";
 
 const Registration = () => {
@@ -16,12 +16,14 @@ const Registration = () => {
   const initialValues = {
     firstName: user.firstName,
     lastName: user.lastName,
+    preferredName: "",
   };
 
   console.log(initialValues);
   const validationSchema = Yup.object({
     firstName: Yup.string().required(),
     lastName: Yup.string().required(),
+    preferredName: Yup.string(),
   });
 
   const onSubmit = (values) => {
@@ -43,20 +45,27 @@ const Registration = () => {
         >
           {({ handleSubmit, values, errors }) => (
             <div>
-              <InputControl
-                isRequired
-                isDisabled
-                id="firstName"
-                name="firstName"
-                label="First name"
-              />
-              <InputControl
-                isRequired
-                isDisabled
-                id="lastName"
-                name="lastName"
-                label="Last Name"
-              />
+              <Flex>
+                <InputControl
+                  isRequired
+                  id="firstName"
+                  name="firstName"
+                  label="First name"
+                  marginRight="10px"
+                />
+                <InputControl
+                  isRequired
+                  id="lastName"
+                  name="lastName"
+                  label="Last Name"
+                  marginRight="10px"
+                />
+                <InputControl
+                  id="preferredName"
+                  name="preferredName"
+                  label="Preferred name"
+                />
+              </Flex>
             </div>
           )}
         </Formik>
