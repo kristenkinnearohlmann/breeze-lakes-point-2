@@ -76,10 +76,10 @@ const Registration = () => {
   ];
 
   const initialValues = {
-    firstName: user.firstName || "",
-    middleName: "",
-    lastName: user.lastName || "",
-    preferredName: "",
+    firstName: user.firstName || null,
+    middleName: null,
+    lastName: user.lastName || null,
+    preferredName: null,
   };
 
   console.log(initialValues);
