@@ -76,9 +76,9 @@ const Registration = () => {
   ];
 
   const initialValues = {
-    firstName: user.firstName,
+    firstName: user.firstName || "",
     middleName: "",
-    lastName: user.lastName,
+    lastName: user.lastName || "",
     preferredName: "",
   };
 
