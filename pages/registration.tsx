@@ -7,7 +7,7 @@ import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
 // import { EventEmitter } from "stream";
 // import { eventNames } from "process";
-import { InputControl } from "formik-chakra-ui";
+import { InputControl, SubmitButton } from "formik-chakra-ui";
 
 const Registration = () => {
   const { user } = useMe();
@@ -28,6 +28,7 @@ const Registration = () => {
 
   const onSubmit = (values) => {
     event.preventDefault;
+    console.log("In Submit");
     console.log(values);
   };
 
@@ -44,7 +45,7 @@ const Registration = () => {
           validationSchema={validationSchema}
         >
           {({ handleSubmit, values, errors }) => (
-            <div>
+            <Box as="form" onSubmit={handleSubmit as any}>
               <Flex>
                 <InputControl
                   isRequired
@@ -66,7 +67,8 @@ const Registration = () => {
                   label="Preferred name"
                 />
               </Flex>
-            </div>
+              <SubmitButton>Submit</SubmitButton>
+            </Box>
           )}
         </Formik>
       </Box>
