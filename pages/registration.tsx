@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Input } from "@chakra-ui/react";
 import { Formik } from "formik";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
@@ -15,11 +15,13 @@ const Registration = () => {
 
   const initialValues = {
     firstName: user.firstName,
+    lastName: user.lastName,
   };
 
   console.log(initialValues);
   const validationSchema = Yup.object({
     firstName: Yup.string().required(),
+    lastName: Yup.string().required(),
   });
 
   const onSubmit = (values) => {
@@ -40,21 +42,22 @@ const Registration = () => {
           validationSchema={validationSchema}
         >
           {({ handleSubmit, values, errors }) => (
-            // <FormControl isRequired>
-            //   <FormLabel htmlFor="first-name">First name</FormLabel>
-            //   <Input
-            //     id="first-name"
-            //     name="first-name"
-            //     placeholder="First name"
-            //   ></Input>
-            // </FormControl>
-            <InputControl
-              isRequired
-              isDisabled
-              id="firstName"
-              name="firstName"
-              label="First name"
-            />
+            <div>
+              <InputControl
+                isRequired
+                isDisabled
+                id="firstName"
+                name="firstName"
+                label="First name"
+              />
+              <InputControl
+                isRequired
+                isDisabled
+                id="lastName"
+                name="lastName"
+                label="Last Name"
+              />
+            </div>
           )}
         </Formik>
       </Box>
