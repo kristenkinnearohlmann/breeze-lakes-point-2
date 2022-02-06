@@ -8,6 +8,7 @@ import { useMe } from "../lib/hooks";
 // import { EventEmitter } from "stream";
 // import { eventNames } from "process";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
+import { getEnvironmentData } from "worker_threads";
 
 const Registration = () => {
   const { user } = useMe();
@@ -75,6 +76,7 @@ const Registration = () => {
     "WY",
   ];
 
+  console.log(user?.firstName || "");
   const initialValues = {
     // firstName: user.firstName || null,
     // middleName: null,
@@ -85,6 +87,15 @@ const Registration = () => {
     lastName: "",
     preferredName: "",
   };
+
+  const userValues = {
+    firstName: user.firstName,
+    middleName: null,
+    lastName: user.lastName,
+    preferredName: null,
+  };
+
+  const getData = () => (user?.id ? userValues : initialValues);
 
   console.log(initialValues);
   const validationSchema = Yup.object({
@@ -108,9 +119,10 @@ const Registration = () => {
       </Box>
       <Box>
         <Formik
-          initialValues={initialValues}
+          initialValues={getData()}
           onSubmit={onSubmit}
           validationSchema={validationSchema}
+          enableReinitialize={true}
         >
           {({ handleSubmit, values, errors }) => (
             <Box as="form" onSubmit={handleSubmit as any}>
