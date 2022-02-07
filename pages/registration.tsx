@@ -88,9 +88,9 @@ const Registration = () => {
 
   const validationSchema = Yup.object({
     firstName: Yup.string().required(),
-    middleName: Yup.string(),
+    middleName: Yup.string().nullable(),
     lastName: Yup.string().required(),
-    preferredName: Yup.string(),
+    preferredName: Yup.string().nullable(),
   });
 
   const onSubmit = (values) => {
