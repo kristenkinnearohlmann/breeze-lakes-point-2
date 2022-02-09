@@ -121,11 +121,25 @@ const Registration = () => {
         >
           {({ handleSubmit, values, errors }) => (
             <Box as="form" onSubmit={handleSubmit as any}>
-              <Box paddingBottom="1rem">
-                <Text>Login Information</Text>
+              <Box>
+                <Text
+                  borderBottom="1px solid #fff"
+                  fontSize="2xl"
+                  marginBottom="1rem"
+                  paddingBottom="10px"
+                >
+                  Login Information
+                </Text>
               </Box>
-              <Box paddingBottom="1rem">
-                <Text>Personal Information</Text>
+              <Box>
+                <Text
+                  borderBottom="1px solid #fff"
+                  fontSize="2xl"
+                  marginBottom="1rem"
+                  paddingBottom="10px"
+                >
+                  Personal Information
+                </Text>
                 <Flex>
                   <InputControl
                     isRequired
