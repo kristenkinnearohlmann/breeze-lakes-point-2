@@ -103,7 +103,14 @@ const Registration = () => {
     <div>
       <UserHeader user={user}></UserHeader>
       <Box paddingBottom="15px">
-        <Text>Complete or review your registration information.</Text>
+        <Text paddingBottom="1rem">
+          Working for our event is a one-of-a-kind experience! Please complete
+          or update these registration details prior to visiting our office.
+        </Text>
+        <Text paddingBottom="1rem">
+          We will meet with you to review this information and look for open
+          interviews that match your unique personal contribution.
+        </Text>
       </Box>
       <Box>
         <Formik
@@ -114,33 +121,39 @@ const Registration = () => {
         >
           {({ handleSubmit, values, errors }) => (
             <Box as="form" onSubmit={handleSubmit as any}>
-              <Flex>
-                <InputControl
-                  isRequired
-                  id="firstName"
-                  name="firstName"
-                  label="First name"
-                  marginRight="10px"
-                />
-                <InputControl
-                  id="middleName"
-                  name="middleName"
-                  label="Middle name"
-                  marginRight="10px"
-                />
-                <InputControl
-                  isRequired
-                  id="lastName"
-                  name="lastName"
-                  label="Last Name"
-                  marginRight="10px"
-                />
-                <InputControl
-                  id="preferredName"
-                  name="preferredName"
-                  label="Preferred name"
-                />
-              </Flex>
+              <Box paddingBottom="1rem">
+                <Text>Login Information</Text>
+              </Box>
+              <Box paddingBottom="1rem">
+                <Text>Personal Information</Text>
+                <Flex>
+                  <InputControl
+                    isRequired
+                    id="firstName"
+                    name="firstName"
+                    label="First name"
+                    marginRight="10px"
+                  />
+                  <InputControl
+                    id="middleName"
+                    name="middleName"
+                    label="Middle name"
+                    marginRight="10px"
+                  />
+                  <InputControl
+                    isRequired
+                    id="lastName"
+                    name="lastName"
+                    label="Last Name"
+                    marginRight="10px"
+                  />
+                  <InputControl
+                    id="preferredName"
+                    name="preferredName"
+                    label="Preferred name"
+                  />
+                </Flex>
+              </Box>
               <Box paddingTop="10px">
                 <SubmitButton>Submit</SubmitButton>
               </Box>
