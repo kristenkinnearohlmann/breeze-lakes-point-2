@@ -71,6 +71,7 @@ const Registration = () => {
   ];
 
   const initialValues = {
+    userName: "",
     firstName: "",
     middleName: "",
     lastName: "",
@@ -78,6 +79,7 @@ const Registration = () => {
   };
 
   const userValues = {
+    userName: user?.username || null,
     firstName: user?.firstName || null,
     middleName: null,
     lastName: user?.lastName || null,
@@ -87,6 +89,7 @@ const Registration = () => {
   const getData = () => (user?.id ? userValues : initialValues);
 
   const validationSchema = Yup.object({
+    userName: Yup.string().required(),
     firstName: Yup.string().required(),
     middleName: Yup.string().nullable(),
     lastName: Yup.string().required(),
@@ -98,6 +101,8 @@ const Registration = () => {
     console.log("Submitted values");
     console.log(values);
   };
+
+  console.log(user);
 
   return (
     <div>
@@ -130,6 +135,13 @@ const Registration = () => {
                 >
                   Login Information
                 </Text>
+                <Flex>
+                  <InputControl
+                    id="userName"
+                    name="userName"
+                    label="User name"
+                  />
+                </Flex>
               </Box>
               <Box>
                 <Text
