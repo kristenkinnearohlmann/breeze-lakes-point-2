@@ -126,7 +126,7 @@ const Registration = () => {
         >
           {({ handleSubmit, values, errors }) => (
             <Box as="form" onSubmit={handleSubmit as any}>
-              <Box>
+              <Box marginBottom="1rem">
                 <Text
                   borderBottom="1px solid #fff"
                   fontSize="2xl"
@@ -143,7 +143,7 @@ const Registration = () => {
                   />
                 </Flex>
               </Box>
-              <Box>
+              <Box marginBottom="1rem">
                 <Text
                   borderBottom="1px solid #fff"
                   fontSize="2xl"
