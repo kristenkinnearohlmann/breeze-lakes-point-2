@@ -133,23 +133,6 @@ const Registration = () => {
                   marginBottom="1rem"
                   paddingBottom="10px"
                 >
-                  Login Information
-                </Text>
-                <Flex>
-                  <InputControl
-                    id="userName"
-                    name="userName"
-                    label="User name"
-                  />
-                </Flex>
-              </Box>
-              <Box marginBottom="1rem">
-                <Text
-                  borderBottom="1px solid #fff"
-                  fontSize="2xl"
-                  marginBottom="1rem"
-                  paddingBottom="10px"
-                >
                   Personal Information
                 </Text>
                 <Flex>
@@ -173,10 +156,29 @@ const Registration = () => {
                     label="Last Name"
                     marginRight="10px"
                   />
+                </Flex>
+                <Flex>
                   <InputControl
                     id="preferredName"
                     name="preferredName"
                     label="Preferred name"
+                  />
+                </Flex>
+              </Box>
+              <Box marginBottom="1rem">
+                <Text
+                  borderBottom="1px solid #fff"
+                  fontSize="2xl"
+                  marginBottom="1rem"
+                  paddingBottom="10px"
+                >
+                  Login Information
+                </Text>
+                <Flex>
+                  <InputControl
+                    id="userName"
+                    name="userName"
+                    label="User name"
                   />
                 </Flex>
               </Box>
