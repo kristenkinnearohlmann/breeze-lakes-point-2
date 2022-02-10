@@ -71,7 +71,6 @@ const Registration = () => {
   ];
 
   const initialValues = {
-    userName: "",
     firstName: "",
     middleName: "",
     lastName: "",
@@ -79,7 +78,6 @@ const Registration = () => {
   };
 
   const userValues = {
-    userName: user?.username || null,
     firstName: user?.firstName || null,
     middleName: null,
     lastName: user?.lastName || null,
@@ -107,12 +105,12 @@ const Registration = () => {
   return (
     <div>
       <UserHeader user={user}></UserHeader>
-      <Box paddingBottom="15px">
-        <Text paddingBottom="1rem">
+      <Box marginBottom="15px">
+        <Text marginBottom="1rem">
           Working for our event is a one-of-a-kind experience! Please complete
           or update these registration details prior to visiting our office.
         </Text>
-        <Text paddingBottom="1rem">
+        <Text marginBottom="1rem">
           We will meet with you to review this information and look for open
           interviews that match your unique personal contribution.
         </Text>
@@ -135,7 +133,7 @@ const Registration = () => {
                 >
                   Personal Information
                 </Text>
-                <Flex>
+                <Flex marginBottom="10px">
                   <InputControl
                     isRequired
                     id="firstName"
@@ -172,15 +170,8 @@ const Registration = () => {
                   marginBottom="1rem"
                   paddingBottom="10px"
                 >
-                  Login Information
+                  TBD
                 </Text>
-                <Flex>
-                  <InputControl
-                    id="userName"
-                    name="userName"
-                    label="User name"
-                  />
-                </Flex>
               </Box>
               <Box paddingTop="10px">
                 <SubmitButton>Submit</SubmitButton>
