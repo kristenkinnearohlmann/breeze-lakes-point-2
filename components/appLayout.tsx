@@ -2,8 +2,11 @@ import { Box, Flex } from "@chakra-ui/layout";
 import HeadMeta from "../pages/partials/headMeta";
 import TopNav from "./topNav";
 import LeftNav from "./leftNav";
+import { useMe } from "../lib/hooks";
 
 const AppLayout = ({ children }: { children: any }) => {
+  const { user } = useMe();
+
   return (
     <div>
       <HeadMeta />
@@ -13,7 +16,7 @@ const AppLayout = ({ children }: { children: any }) => {
         </Box>
         <Flex>
           <Box height="calc(100vh - 90px)" width="150px" padding="10px">
-            <LeftNav></LeftNav>
+            <LeftNav user={user}></LeftNav>
           </Box>
           <Box
             bg="grey"

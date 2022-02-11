@@ -33,8 +33,15 @@ const navMenu = [
   },
 ];
 
-const LeftNav = () => {
+const LeftNav = ({ user }: { user: any }) => {
   const router = useRouter();
+  let navMenuFiltered = [];
+
+  if (user?.role === "User") {
+    navMenuFiltered = navMenu.filter((nav) => nav.name !== "Admin");
+  } else {
+    navMenuFiltered = navMenu;
+  }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -52,7 +59,7 @@ const LeftNav = () => {
     >
       <Box paddingTop="10px">
         <List spacing={2}>
-          {navMenu.map((menu) => (
+          {navMenuFiltered.map((menu) => (
             <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
               <LinkBox>
                 <NextLink href={menu.route} passHref>
