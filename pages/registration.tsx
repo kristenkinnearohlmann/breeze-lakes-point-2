@@ -87,7 +87,6 @@ const Registration = () => {
   const getData = () => (user?.id ? userValues : initialValues);
 
   const validationSchema = Yup.object({
-    userName: Yup.string().required(),
     firstName: Yup.string().required(),
     middleName: Yup.string().nullable(),
     lastName: Yup.string().required(),
