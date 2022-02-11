@@ -1,4 +1,3 @@
-import { Box, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import Dashboard from "../components/dashboard";
 import UserHeader from "../components/userHeader";

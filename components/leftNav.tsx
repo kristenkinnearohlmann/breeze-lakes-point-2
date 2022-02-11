@@ -50,32 +50,34 @@ const LeftNav = () => {
       padding="20px 10px 0 0"
       color="white"
     >
-      <List spacing={2}>
-        {navMenu.map((menu) => (
-          <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
-            <LinkBox>
-              <NextLink href={menu.route} passHref>
-                <LinkOverlay>
-                  <ListIcon as={menu.icon} color="white" marginRight="5px" />
-                  {menu.name}
-                </LinkOverlay>
-              </NextLink>
-            </LinkBox>
-          </ListItem>
-        ))}
-      </List>
-      <Box marginTop="8px">
-        <form onSubmit={handleSubmit}>
-          <Button
-            variant="link"
-            color="white"
-            fontWeight="normal"
-            type="submit"
-          >
-            <Icon as={MdOutlineLogout} marginX="5px" />
-            Sign Out
-          </Button>
-        </form>
+      <Box paddingTop="10px">
+        <List spacing={2}>
+          {navMenu.map((menu) => (
+            <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
+              <LinkBox>
+                <NextLink href={menu.route} passHref>
+                  <LinkOverlay>
+                    <ListIcon as={menu.icon} color="white" marginRight="5px" />
+                    {menu.name}
+                  </LinkOverlay>
+                </NextLink>
+              </LinkBox>
+            </ListItem>
+          ))}
+        </List>
+        <Box marginTop="8px">
+          <form onSubmit={handleSubmit}>
+            <Button
+              variant="link"
+              color="white"
+              fontWeight="normal"
+              type="submit"
+            >
+              <Icon as={MdOutlineLogout} marginX="5px" />
+              Sign Out
+            </Button>
+          </form>
+        </Box>
       </Box>
     </Box>
   );
