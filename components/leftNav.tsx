@@ -10,6 +10,7 @@ import { Icon } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
 import { MdOutlineLogout } from "react-icons/md";
 import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
 import { signout } from "../lib/mutations";
@@ -27,9 +28,14 @@ const navMenu = [
     route: "/registration",
   },
   {
+    name: "Profile",
+    icon: CgProfile,
+    route: "/profile",
+  },
+  {
     name: "Admin",
     icon: RiAdminLine,
-    route: "/",
+    route: "/admin",
   },
 ];
 
@@ -57,21 +63,27 @@ const LeftNav = ({ user }: { user: any }) => {
       padding="20px 10px 0 0"
       color="white"
     >
-      <Box paddingTop="10px">
-        <List spacing={2}>
-          {navMenuFiltered.map((menu) => (
-            <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
-              <LinkBox>
-                <NextLink href={menu.route} passHref>
-                  <LinkOverlay>
-                    <ListIcon as={menu.icon} color="white" marginRight="5px" />
-                    {menu.name}
-                  </LinkOverlay>
-                </NextLink>
-              </LinkBox>
-            </ListItem>
-          ))}
-        </List>
+      <Box marginTop="10px">
+        <Box>
+          <List spacing={2}>
+            {navMenuFiltered.map((menu) => (
+              <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
+                <LinkBox>
+                  <NextLink href={menu.route} passHref>
+                    <LinkOverlay>
+                      <ListIcon
+                        as={menu.icon}
+                        color="white"
+                        marginRight="5px"
+                      />
+                      {menu.name}
+                    </LinkOverlay>
+                  </NextLink>
+                </LinkBox>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
         <Box marginTop="8px">
           <form onSubmit={handleSubmit}>
             <Button
