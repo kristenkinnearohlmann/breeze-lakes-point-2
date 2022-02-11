@@ -78,10 +78,10 @@ const Registration = () => {
   };
 
   const userValues = {
-    firstName: user?.firstName || null,
-    middleName: null,
-    lastName: user?.lastName || null,
-    preferredName: null,
+    firstName: user?.firstName || "",
+    middleName: "",
+    lastName: user?.lastName || "",
+    preferredName: "",
   };
 
   const getData = () => (user?.id ? userValues : initialValues);
