@@ -12,6 +12,7 @@ const Profile = () => {
         <Text>Profile</Text>
         <Text>First name: {user?.firstName}</Text>
         <Text>Last name: {user?.lastName}</Text>
+        <Text>Role: {user?.role}</Text>
       </Box>
     </div>
   );
