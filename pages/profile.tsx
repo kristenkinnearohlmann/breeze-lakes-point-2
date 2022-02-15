@@ -9,7 +9,7 @@ const Profile = () => {
     <div>
       <HeadMeta subtitle="Profile" />
       <Box>
-        <Text>Profile</Text>
+        <Text fontSize="3xl">Profile Information</Text>
         <Text>First name: {user?.firstName}</Text>
         <Text>Last name: {user?.lastName}</Text>
         <Text>Role: {user?.role}</Text>
