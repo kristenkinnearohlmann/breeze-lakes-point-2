@@ -9,10 +9,14 @@ const Profile = () => {
     <div>
       <HeadMeta subtitle="Profile" />
       <Box>
-        <Text fontSize="3xl">Profile Information</Text>
+        <Text borderBottom="2px solid #fff" fontSize="3xl" marginBottom="15px">
+          Profile Information
+        </Text>
         <Text>First name: {user?.firstName}</Text>
         <Text>Last name: {user?.lastName}</Text>
-        <Text>Role: {user?.role}</Text>
+      </Box>
+      <Box>
+        <Text>Change your password:</Text>
       </Box>
     </div>
   );
