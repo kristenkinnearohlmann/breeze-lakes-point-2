@@ -11,6 +11,7 @@ const Admin = () => {
         <Text borderBottom="2px solid #fff" fontSize="3xl" marginBottom="15px">
           Admin
         </Text>
+        <Text>Admin stuff will go here.</Text>
       </Box>
     </div>
   );
