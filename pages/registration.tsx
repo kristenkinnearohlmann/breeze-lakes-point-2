@@ -100,19 +100,27 @@ const Registration = () => {
   };
 
   console.log(user);
+  console.log(user?.role);
 
   return (
     <div>
       <UserHeader user={user}></UserHeader>
       <Box marginBottom="15px">
-        <Text marginBottom="1rem">
-          Working for our event is a one-of-a-kind experience! Please complete
-          or update these registration details prior to visiting our office.
-        </Text>
-        <Text marginBottom="1rem">
-          We will meet with you to review this information and look for open
-          interviews that match your unique personal contribution.
-        </Text>
+        {user?.role === "User" ? (
+          <div>
+            <Text marginBottom="1rem">
+              Working for our event is a one-of-a-kind experience! Please
+              complete or update these registration details prior to visiting
+              our office.
+            </Text>
+            <Text marginBottom="1rem">
+              We will meet with you to review this information and look for open
+              interviews that match your unique personal contribution.
+            </Text>
+          </div>
+        ) : (
+          <Text>Review and update information for a user.</Text>
+        )}
       </Box>
       <Box>
         <Formik
