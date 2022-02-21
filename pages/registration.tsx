@@ -5,9 +5,11 @@ import UserHeader from "../components/userHeader";
 import { useMe } from "../lib/hooks";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
 
-const Registration = ({ regUserId }: { regUserId: string }) => {
+const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
-  console.log(regUserId);
+  console.log(selectedUserId);
+  const dataUserId = selectedUserId || user?.id;
+  console.log(dataUserId);
 
   const stateAbbrevs = [
     "AL",
