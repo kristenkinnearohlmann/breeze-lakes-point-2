@@ -10,3 +10,12 @@ export const useMe = () => {
     isError: error,
   };
 };
+
+export const useRegData = () => {
+  const { data, error } = useSWR("/regData", fetcher);
+  return {
+    response: data,
+    isLoading: !data && !error,
+    isError: error,
+  };
+};
