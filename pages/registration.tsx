@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
-import { useMe } from "../lib/hooks";
+import { useMe, useRegData } from "../lib/hooks";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
@@ -10,6 +10,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   console.log(selectedUserId);
   const dataUserId = selectedUserId || user?.id;
   console.log(dataUserId);
+  const { response } = useRegData();
+  console.log(response);
 
   const stateAbbrevs = [
     "AL",
