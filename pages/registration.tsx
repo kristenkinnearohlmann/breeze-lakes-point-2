@@ -11,7 +11,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const dataUserId = selectedUserId || user?.id;
   console.log(dataUserId);
   const { response } = useRegData();
-  console.log(response);
+  console.log("Is this a response?", response);
 
   const stateAbbrevs = [
     "AL",

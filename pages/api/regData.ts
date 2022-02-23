@@ -1,6 +1,6 @@
-import { validateRoute } from "../../lib/auth";
+import { getRegData } from "../../lib/data";
 
-export default validateRoute(async (req, res, user) => {
+export default getRegData(async (req, res, user, data) => {
   console.log("GET and POST registration data");
-  res.json({ ...user }, "regData");
+  res.json({ ...data });
 });
