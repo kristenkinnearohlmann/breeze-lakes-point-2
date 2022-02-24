@@ -3,7 +3,7 @@ import fetcher from "./fetcher";
 
 export const useMe = () => {
   const { data, error } = useSWR("/me", fetcher);
-
+  console.log("In useMe", data);
   return {
     user: data,
     isLoading: !data && !error,
@@ -13,6 +13,7 @@ export const useMe = () => {
 
 export const useRegData = () => {
   const { data, error } = useSWR("/regData", fetcher);
+  console.log("In useRegData", data);
   return {
     response: data,
     isLoading: !data && !error,
