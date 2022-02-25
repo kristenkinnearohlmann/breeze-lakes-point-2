@@ -12,7 +12,7 @@ export const useMe = () => {
 };
 
 export const useRegData = () => {
-  const { data, error } = useSWR("/regData", fetcher);
+  const { data, error } = useSWR("/regdata", fetcher);
   console.log("In useRegData", data);
   return {
     response: data,
