@@ -11,9 +11,10 @@ export const useMe = () => {
   };
 };
 
-export const useRegData = () => {
+export const useRegData = (dataUserId) => {
   const { data, error } = useSWR("/regdata", fetcher);
-  console.log("In useRegData", data);
+  console.log("userRegData dataUserId", dataUserId);
+  console.log("useRegData Data", data);
   return {
     response: data,
     isLoading: !data && !error,

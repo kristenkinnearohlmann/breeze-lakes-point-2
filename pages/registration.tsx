@@ -7,10 +7,10 @@ import { InputControl, SubmitButton } from "formik-chakra-ui";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
-  console.log(selectedUserId);
+  console.log("Was a user passed in?", selectedUserId);
   const dataUserId = selectedUserId || user?.id;
-  console.log(dataUserId);
-  const { response } = useRegData();
+  console.log("Choose what user to look up", dataUserId);
+  const { response } = useRegData(dataUserId);
   console.log("Is this a response?", response);
 
   const stateAbbrevs = [
