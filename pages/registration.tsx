@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
-import { useMe, useRegData, useUser } from "../lib/hooks";
+import { useMe, useUser } from "../lib/hooks";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
@@ -10,8 +10,6 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   console.log("Was a user passed in?", selectedUserId);
   const dataUserId = selectedUserId || user?.id;
   console.log("Choose what user to look up", dataUserId);
-  const { response } = useRegData(dataUserId);
-  console.log("Is this a response?", response);
   const { userData } = useUser(dataUserId);
   console.log("New useUser", userData);
 
