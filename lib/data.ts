@@ -9,6 +9,7 @@ export const getUsers = (handler) => {
 
 export const getUser = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
+    console.log("Unpack handler?");
     const { data } = handler;
     console.log("Inside data lib", data);
     const val = { label: "Single user" };
