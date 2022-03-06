@@ -9,11 +9,8 @@ export const getUsers = (handler) => {
 
 export const getUser = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    console.log("Unpack handler?");
-    const { data } = handler;
-    console.log("Inside data lib", data);
     console.log("Is request query here", req.query);
     const val = { label: "Single user" };
-    return handler(req, res, data);
+    return handler(req, res, val);
   };
 };
