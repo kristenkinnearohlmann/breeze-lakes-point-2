@@ -10,7 +10,8 @@ export const getUsers = (handler) => {
 export const handleUserData = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("HTTP verb: ", req.method);
-    const val = req.query;
+    // const val = req.query;
+    const val = { label: "Obvious value" };
     return handler(req, res, val);
   };
 };
