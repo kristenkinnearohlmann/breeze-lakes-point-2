@@ -81,7 +81,7 @@ const LeftNav = ({ user }: { user: any }) => {
           </List>
         </Box>
         {user?.role === "User" ? null : (
-          <Box marginTop="10px">
+          <Box borderTop="2px solid grey" marginTop="10px">
             <List spacing={2}>
               {navMenuAdmin.map((menu) => (
                 <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
