@@ -32,6 +32,9 @@ const navMenu = [
     icon: CgProfile,
     route: "/profile",
   },
+];
+
+const navMenuAdmin = [
   {
     name: "Admin",
     icon: RiAdminLine,
@@ -41,13 +44,13 @@ const navMenu = [
 
 const LeftNav = ({ user }: { user: any }) => {
   const router = useRouter();
-  let navMenuFiltered = [];
+  // let navMenuFiltered = [];
 
-  if (user?.role === "User") {
-    navMenuFiltered = navMenu.filter((nav) => nav.name !== "Admin");
-  } else {
-    navMenuFiltered = navMenu;
-  }
+  // if (user?.role === "User") {
+  //   navMenuFiltered = navMenu.filter((nav) => nav.name !== "Admin");
+  // } else {
+  //   navMenuFiltered = navMenu;
+  // }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -66,7 +69,7 @@ const LeftNav = ({ user }: { user: any }) => {
       <Box marginTop="10px">
         <Box>
           <List spacing={2}>
-            {navMenuFiltered.map((menu) => (
+            {navMenu.map((menu) => (
               <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
                 <LinkBox>
                   <NextLink href={menu.route} passHref>
@@ -84,6 +87,28 @@ const LeftNav = ({ user }: { user: any }) => {
             ))}
           </List>
         </Box>
+        {user?.role === "User" ? null : (
+          <Box>
+            <List spacing={2}>
+              {navMenuAdmin.map((menu) => (
+                <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
+                  <LinkBox>
+                    <NextLink href={menu.route} passHref>
+                      <LinkOverlay>
+                        <ListIcon
+                          as={menu.icon}
+                          color="white"
+                          marginRight="5px"
+                        />
+                        {menu.name}
+                      </LinkOverlay>
+                    </NextLink>
+                  </LinkBox>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        )}
         <Box marginTop="8px">
           <form onSubmit={handleSubmit}>
             <Button
