@@ -7,10 +7,11 @@ export const getUsers = (handler) => {
   };
 };
 
-export const getUser = (handler) => {
+export const handleUserData = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("Is request query here", req.query);
-    const val = { label: "Single user" };
+    // const val = { label: "Single user" };
+    const val = req.query;
     return handler(req, res, val);
   };
 };
