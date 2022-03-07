@@ -44,13 +44,6 @@ const navMenuAdmin = [
 
 const LeftNav = ({ user }: { user: any }) => {
   const router = useRouter();
-  // let navMenuFiltered = [];
-
-  // if (user?.role === "User") {
-  //   navMenuFiltered = navMenu.filter((nav) => nav.name !== "Admin");
-  // } else {
-  //   navMenuFiltered = navMenu;
-  // }
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -88,7 +81,7 @@ const LeftNav = ({ user }: { user: any }) => {
           </List>
         </Box>
         {user?.role === "User" ? null : (
-          <Box>
+          <Box marginTop="10px">
             <List spacing={2}>
               {navMenuAdmin.map((menu) => (
                 <ListItem paddingX="5px" fontSize="16px" key={menu.name}>
