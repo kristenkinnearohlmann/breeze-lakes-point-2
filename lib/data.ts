@@ -3,6 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export const getUsers = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("HTTP verb: ", req.method);
+    const qryVal = req.query;
     const data = { label: "All users" };
     return handler(req, res, data);
   };
@@ -11,8 +12,8 @@ export const getUsers = (handler) => {
 export const handleUserData = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("HTTP verb: ", req.method);
-    // const val = req.query;
-    const val = { label: "Obvious value" };
-    return handler(req, res, val);
+    const val = req.query.userId;
+    const data = { label: "Obvious value", userId: val };
+    return handler(req, res, data);
   };
 };
