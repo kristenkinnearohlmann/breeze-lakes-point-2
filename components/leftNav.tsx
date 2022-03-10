@@ -80,7 +80,7 @@ const LeftNav = ({ user }: { user: any }) => {
             ))}
           </List>
         </Box>
-        {user?.role === "User" ? null : (
+        {(user && user?.role) === "User" ? null : (
           <Box marginTop="10px">
             <List borderTop="2px solid grey" marginTop="10px" spacing={2}>
               {navMenuAdmin.map((menu) => (
