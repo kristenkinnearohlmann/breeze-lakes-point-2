@@ -12,8 +12,13 @@ export const getUsers = (handler) => {
 export const handleUserData = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
     console.log("HTTP verb: ", req.method);
+    console.log(userData());
     const qry = req.query.userId;
     const data = { label: "Obvious value", userId: qry };
     return handler(req, res, data);
   };
+};
+
+const userData = () => {
+  return { msg: "Return data from userData" };
 };
