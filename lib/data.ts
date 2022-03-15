@@ -25,8 +25,9 @@ const userData = async (qry) => {
   // return { msg: "Return data from userData" };
   // Need further work from: https://www.prisma.io/docs/concepts/components/prisma-client/select-fields
   console.log("In userData function", qry);
-  return { label: "Stuff happened" };
-  // if (qry === undefined) return;
+
+  if (qry === undefined) return;
+
   // const result: object | null = await prisma.user.findUnique({
   //   where: {
   //     id: qry,
@@ -39,4 +40,7 @@ const userData = async (qry) => {
   //   },
   // });
   // return result;
+  console.log(qry);
+
+  return { label: "Stuff happened" };
 };
