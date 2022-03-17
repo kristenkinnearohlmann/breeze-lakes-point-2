@@ -28,12 +28,19 @@ const userData = async (qry) => {
 
   if (qry === undefined) return;
 
-  const result = await prisma.user.findUnique({
+  const data = await prisma.user.findUnique({
     where: {
       id: qry,
     },
+    select: {
+      username: true,
+      email: true,
+      firstName: true,
+      lastName: true,
+    },
   });
 
+  const result = { ...data, msg: "Found" };
   console.log("result is", result);
   // const result: object | null = await prisma.user.findUnique({
   //   where: {
