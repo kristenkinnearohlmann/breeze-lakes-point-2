@@ -13,7 +13,7 @@ export const useMe = () => {
 
 export const useUser = (dataUserId) => {
   const { data, error } = useSWR(`/users/${dataUserId}`, fetcher);
-  console.log("Single user retrieve", dataUserId);
+
   return {
     userData: data,
     isLoading: !data && !error,

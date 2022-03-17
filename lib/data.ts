@@ -26,6 +26,7 @@ const userData = async (qry) => {
       id: qry,
     },
     select: {
+      id: true,
       username: true,
       email: true,
       firstName: true,
