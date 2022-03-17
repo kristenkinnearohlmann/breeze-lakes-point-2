@@ -102,9 +102,6 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     console.log(values);
   };
 
-  console.log(user);
-  console.log(user?.role);
-
   return (
     <div>
       <UserHeader user={user}></UserHeader>
