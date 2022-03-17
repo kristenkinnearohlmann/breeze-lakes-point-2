@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import prisma from "prisma";
+import prisma from "../lib/prisma";
 
 export const getUsers = (handler) => {
   return async (req: NextApiRequest, res: NextApiResponse) => {
@@ -28,6 +28,13 @@ const userData = async (qry) => {
 
   if (qry === undefined) return;
 
+  const result = await prisma.user.findUnique({
+    where: {
+      id: qry,
+    },
+  });
+
+  console.log("result is", result);
   // const result: object | null = await prisma.user.findUnique({
   //   where: {
   //     id: qry,
