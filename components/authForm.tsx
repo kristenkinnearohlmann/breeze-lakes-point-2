@@ -19,6 +19,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
+  const [middleName, setMiddleName] = useState("");
   const [lastName, setLastName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
@@ -126,6 +127,13 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   placeholder="first name"
                   type="text"
                   onChange={(e) => setFirstName(e.target.value)}
+                />
+                <Input
+                  mt="5px"
+                  mr="2px"
+                  placeholder="middle name"
+                  type="text"
+                  onChange={(e) => setMiddleName(e.target.value)}
                 />
                 <Input
                   mt="5px"
