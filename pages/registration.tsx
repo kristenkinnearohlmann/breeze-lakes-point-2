@@ -177,7 +177,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   marginBottom="1rem"
                   paddingBottom="10px"
                 >
-                  TBD
+                  Remaining Form Fields
                 </Text>
               </Box>
               <Box paddingTop="10px">
