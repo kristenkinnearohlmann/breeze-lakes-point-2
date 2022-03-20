@@ -119,6 +119,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 </Button>
               </InputRightElement>
             </InputGroup>
+            {/* add middle name */}
             {mode === "signup" ? (
               <InputGroup>
                 <Input
