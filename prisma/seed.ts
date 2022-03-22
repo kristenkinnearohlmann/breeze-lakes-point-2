@@ -14,6 +14,7 @@ const run = async () => {
       email: "user@test.com",
       firstName: "Test",
       lastName: "User",
+      noMiddleName: true,
     },
   });
   const user2 = await prisma.user.upsert({
