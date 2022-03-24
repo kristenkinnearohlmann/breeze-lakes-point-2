@@ -26,6 +26,30 @@ const run = async () => {
       firstName: "Admin",
       lastName: "Super",
       role: "SuperAdmin",
+      noMiddleName: true,
+    },
+  });
+  const user3 = await prisma.user.upsert({
+    where: { username: "mrdad" },
+    update: {},
+    create: {
+      username: "mrdad",
+      password: bcrypt.hashSync("xyz789", salt),
+      firstName: "Mr",
+      lastName: "Dad",
+      noMiddleName: true,
+    },
+  });
+  const user4 = await prisma.user.upsert({
+    where: { username: "sample@user.com" },
+    update: {},
+    create: {
+      username: "sample@user.com",
+      password: bcrypt.hashSync("samplepwd", salt),
+      email: "sample@user.com",
+      firstName: "Sample",
+      lastName: "User",
+      middleName: "S",
     },
   });
 };
