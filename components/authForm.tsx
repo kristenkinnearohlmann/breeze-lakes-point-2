@@ -20,6 +20,11 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
+  const [noMiddleName, setNoMiddleName] = useState(false);
+  const [checkedNoMiddleName, setCheckedNoMiddleName] = useState(false);
+  const [checkNoMiddleNameDisabled, setCheckNoMiddleNameDisabled] =
+    useState(false);
+  const [middleNameDisabled, setMiddleNameDisabled] = useState(false);
   const [lastName, setLastName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
@@ -33,6 +38,11 @@ const AuthForm = ({ mode }: { mode: any }) => {
   const handleNoEmail = (e) => {
     setCheckedNoEmail(e.target.checked);
     setEmailDisabled(e.target.checked);
+  };
+
+  const handleNoMiddleName = (e) => {
+    setCheckedNoMiddleName(e.target.checked);
+    setMiddleNameDisabled(e.target.checked);
   };
 
   const handleSubmit = async (e: any) => {
@@ -138,6 +148,13 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   onChange={(e) => setMiddleName(e.target.value)}
                 />
                 {/* TODO: add noMiddleName chkbox */}
+                <Checkbox
+                  ml="2px"
+                  onChange={(e) => handleNoMiddleName(e)}
+                  isDisabled={checkNoMiddleNameDisabled}
+                >
+                  No email address
+                </Checkbox>
                 <Input
                   mt="5px"
                   ml="2px"
