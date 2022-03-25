@@ -145,7 +145,12 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   mr="2px"
                   placeholder="middle name"
                   type="text"
-                  onChange={(e) => setMiddleName(e.target.value)}
+                  // onChange={(e) => setMiddleName(e.target.value)}
+                  onChange={(e) => {
+                    setMiddleName(e.target.value);
+                    setCheckNoMiddleNameDisabled(true);
+                  }}
+                  disabled={middleNameDisabled}
                 />
                 {/* TODO: add noMiddleName chkbox */}
                 <Checkbox
