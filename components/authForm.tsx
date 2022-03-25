@@ -52,7 +52,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
     } else {
-      console.log("Middle name", middleName);
       const user = await auth(mode, {
         username,
         password,
@@ -132,7 +131,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
               </InputRightElement>
             </InputGroup>
             {mode === "signup" ? (
-              <InputGroup>
+              <section>
                 <Input
                   mt="5px"
                   mr="2px"
@@ -140,24 +139,26 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   type="text"
                   onChange={(e) => setFirstName(e.target.value)}
                 />
-                <Input
-                  mt="5px"
-                  mr="2px"
-                  placeholder="middle name"
-                  type="text"
-                  onChange={(e) => {
-                    setMiddleName(e.target.value);
-                    setCheckNoMiddleNameDisabled(true);
-                  }}
-                  disabled={middleNameDisabled}
-                />
-                <Checkbox
-                  ml="2px"
-                  onChange={(e) => handleNoMiddleName(e)}
-                  isDisabled={checkNoMiddleNameDisabled}
-                >
-                  No middle name
-                </Checkbox>
+                <InputGroup>
+                  <Input
+                    mt="5px"
+                    mr="2px"
+                    placeholder="middle name"
+                    type="text"
+                    onChange={(e) => {
+                      setMiddleName(e.target.value);
+                      setCheckNoMiddleNameDisabled(true);
+                    }}
+                    disabled={middleNameDisabled}
+                  />
+                  <Checkbox
+                    ml="2px"
+                    onChange={(e) => handleNoMiddleName(e)}
+                    isDisabled={checkNoMiddleNameDisabled}
+                  >
+                    No middle name
+                  </Checkbox>
+                </InputGroup>
                 <Input
                   mt="5px"
                   ml="2px"
@@ -165,7 +166,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   type="text"
                   onChange={(e) => setLastName(e.target.value)}
                 />
-              </InputGroup>
+              </section>
             ) : null}
 
             <Button mt="5px" type="submit" bg="blue.500" isLoading={isLoading}>
