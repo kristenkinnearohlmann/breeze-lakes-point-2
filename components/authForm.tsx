@@ -42,12 +42,14 @@ const AuthForm = ({ mode }: { mode: any }) => {
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
     } else {
+      console.log("Middle name", middleName);
       const user = await auth(mode, {
         username,
         password,
         email,
         firstName,
         lastName,
+        middleName,
       });
     }
     setIsLoading(false);
@@ -119,7 +121,6 @@ const AuthForm = ({ mode }: { mode: any }) => {
                 </Button>
               </InputRightElement>
             </InputGroup>
-            {/* add middle name */}
             {mode === "signup" ? (
               <InputGroup>
                 <Input
@@ -136,6 +137,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
                   type="text"
                   onChange={(e) => setMiddleName(e.target.value)}
                 />
+                {/* TODO: add noMiddleName chkbox */}
                 <Input
                   mt="5px"
                   ml="2px"

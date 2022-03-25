@@ -7,7 +7,8 @@ import prisma from "../../lib/prisma";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const appSecret: any = process.env.BREEZE_LAKES_POINT_SECRET;
   const salt = bcrypt.genSaltSync();
-  const { username, password, email, firstName, lastName } = req.body;
+  const { username, password, email, firstName, lastName, middleName } =
+    req.body;
 
   let user;
 
@@ -19,6 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         email,
         firstName,
         lastName,
+        middleName,
       },
     });
   } catch (e) {

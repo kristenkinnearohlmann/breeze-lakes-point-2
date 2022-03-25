@@ -8,6 +8,7 @@ export const auth = (
     email?: string;
     firstName?: string;
     lastName?: string;
+    middleName?: string;
   }
 ) => {
   return fetcher(`/${mode}`, body);
