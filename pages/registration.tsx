@@ -76,18 +76,16 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const initialValues = {
     firstName: "",
     middleName: "",
-    lastName: "",
-    middleName: "",
     noMiddleName: false,
+    lastName: "",
     preferredName: "",
   };
 
   const userValues = {
     firstName: user?.firstName || "",
-    middleName: "",
-    lastName: user?.lastName || "",
     middleName: user?.middleName || "",
     noMiddleName: user?.noMiddleName || false.valueOf,
+    lastName: user?.lastName || "",
     preferredName: "",
   };
 
