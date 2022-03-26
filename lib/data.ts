@@ -31,6 +31,8 @@ const userData = async (qry) => {
       email: true,
       firstName: true,
       lastName: true,
+      middleName: true,
+      noMiddleName: true,
     },
   });
 
