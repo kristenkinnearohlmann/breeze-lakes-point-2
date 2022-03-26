@@ -13,6 +13,7 @@ const Profile = () => {
           Profile Information
         </Text>
         <Text>First name: {user?.firstName}</Text>
+        <Text>Middle name: {user?.middleName}</Text>
         <Text>Last name: {user?.lastName}</Text>
       </Box>
       <Box>
