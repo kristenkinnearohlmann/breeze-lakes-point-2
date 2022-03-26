@@ -4,7 +4,7 @@ import { useMe } from "../lib/hooks";
 
 const Profile = () => {
   const { user } = useMe();
-
+  console.log(user);
   return (
     <div>
       <HeadMeta subtitle="Profile" />
@@ -13,7 +13,9 @@ const Profile = () => {
           Profile Information
         </Text>
         <Text>First name: {user?.firstName}</Text>
-        <Text>Middle name: {user?.middleName}</Text>
+        {user?.noMiddleName ? null : (
+          <Text>Middle name: {user?.middleName}</Text>
+        )}
         <Text>Last name: {user?.lastName}</Text>
       </Box>
       <Box>
