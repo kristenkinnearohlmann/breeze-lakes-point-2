@@ -77,6 +77,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     firstName: "",
     middleName: "",
     lastName: "",
+    middleName: "",
+    noMiddleName: false,
     preferredName: "",
   };
 
@@ -84,6 +86,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     firstName: user?.firstName || "",
     middleName: "",
     lastName: user?.lastName || "",
+    middleName: user?.middleName || "",
+    noMiddleName: user?.noMiddleName || false.valueOf,
     preferredName: "",
   };
 
