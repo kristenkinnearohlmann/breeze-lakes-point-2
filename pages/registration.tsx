@@ -150,13 +150,13 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     label="First name"
                     marginRight="10px"
                   />
-                  {/* TODO: Handle noMiddleName */}
                   <InputControl
                     id="middleName"
                     name="middleName"
                     label="Middle name"
                     marginRight="10px"
                   />
+                  {user?.noMiddleName ? "None" : "Middle name"}
                   <InputControl
                     isRequired
                     id="lastName"
