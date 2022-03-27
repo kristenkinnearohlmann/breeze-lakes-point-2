@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe, useUser } from "../lib/hooks";
 import { InputControl, SubmitButton } from "formik-chakra-ui";
+import { Checkbox } from "@chakra-ui/react";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
@@ -156,7 +157,9 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     label="Middle name"
                     marginRight="10px"
                   />
-                  {user?.noMiddleName ? "None" : "Middle name"}
+                  {user?.noMiddleName ? (
+                    <Checkbox margin="5px">No middle name</Checkbox>
+                  ) : null}
                   <InputControl
                     isRequired
                     id="lastName"
