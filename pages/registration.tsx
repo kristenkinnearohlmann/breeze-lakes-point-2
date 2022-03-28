@@ -156,9 +156,12 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     name="middleName"
                     label="Middle name"
                     marginRight="10px"
+                    isDisabled={user?.noMiddleName}
                   />
                   {user?.noMiddleName ? (
-                    <Checkbox margin="5px">No middle name</Checkbox>
+                    <Checkbox margin="5px" isChecked={user?.noMiddleName}>
+                      No middle name
+                    </Checkbox>
                   ) : null}
                   <InputControl
                     isRequired
