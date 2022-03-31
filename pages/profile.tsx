@@ -1,9 +1,9 @@
 import { Box, Text } from "@chakra-ui/layout";
 import HeadMeta from "./partials/headMeta";
-import { Formik } from "formik";
 import * as Yup from "yup";
 import { useMe } from "../lib/hooks";
 import { Formik } from "formik";
+import { InputControl } from "formik-chakra-ui";
 
 const Profile = () => {
   const { user } = useMe();
@@ -23,6 +23,20 @@ const Profile = () => {
     lastName: user?.lastName || "",
   };
 
+  const getData = () => (user?.id ? userValues : initialValues);
+
+  const validationSchema = Yup.object({
+    firstName: Yup.string().required(),
+    middleName: Yup.string().nullable(),
+    lastName: Yup.string().required(),
+  });
+
+  const onSubmit = (values) => {
+    event.preventDefault;
+    console.log("Profile values");
+    console.log(values);
+  };
+
   return (
     <div>
       <HeadMeta subtitle="Profile" />
@@ -30,7 +44,35 @@ const Profile = () => {
         <Text borderBottom="2px solid #fff" fontSize="3xl" marginBottom="15px">
           Profile Information
         </Text>
-        <Text>First name: {user?.firstName}</Text>
+        <Box>
+          <Formik
+            initialValues={getData()}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}
+            enableReinitialize={true}
+          >
+            {({ handleSubmit, values, errors }) => (
+              <Box as="form" onSubmit={handleSubmit as any}>
+                <Box>
+                  <InputControl
+                    isRequired
+                    id="firstName"
+                    name="firstName"
+                    label="First name"
+                    marginRight="10px"
+                  />
+                  <InputControl
+                    id="middleName"
+                    name="middleName"
+                    label="Middle name"
+                    marginRight="10px"
+                    isDisabled={user?.noMiddleName}
+                  />
+                </Box>
+              </Box>
+            )}
+          </Formik>
+        </Box>
         {user?.noMiddleName ? null : (
           <Text>Middle name: {user?.middleName}</Text>
         )}
