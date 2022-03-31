@@ -1,10 +1,28 @@
 import { Box, Text } from "@chakra-ui/layout";
 import HeadMeta from "./partials/headMeta";
+import { Formik } from "formik";
+import * as Yup from "yup";
 import { useMe } from "../lib/hooks";
+import { Formik } from "formik";
 
 const Profile = () => {
   const { user } = useMe();
   console.log(user);
+
+  const initialValues = {
+    firstName: "",
+    middleName: "",
+    noMiddleName: false,
+    lastName: "",
+  };
+
+  const userValues = {
+    firstName: user?.firstName || "",
+    middleName: user?.middleName || "",
+    noMiddleName: user?.noMiddleName || false.valueOf,
+    lastName: user?.lastName || "",
+  };
+
   return (
     <div>
       <HeadMeta subtitle="Profile" />
