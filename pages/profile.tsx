@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { useMe } from "../lib/hooks";
 import { Formik } from "formik";
 import { InputControl } from "formik-chakra-ui";
+import { InputGroup } from "@chakra-ui/react";
 
 const Profile = () => {
   const { user } = useMe();
@@ -61,13 +62,16 @@ const Profile = () => {
                     label="First name"
                     marginRight="10px"
                   />
-                  <InputControl
-                    id="middleName"
-                    name="middleName"
-                    label="Middle name"
-                    marginRight="10px"
-                    isDisabled={user?.noMiddleName}
-                  />
+                  <InputGroup>
+                    <InputControl
+                      id="middleName"
+                      name="middleName"
+                      label="Middle name"
+                      marginRight="10px"
+                      isDisabled={user?.noMiddleName}
+                    />
+                    <Text>No middle name</Text>
+                  </InputGroup>
                 </Box>
               </Box>
             )}
