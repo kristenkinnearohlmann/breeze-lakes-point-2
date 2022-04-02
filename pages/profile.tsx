@@ -70,21 +70,22 @@ const Profile = () => {
                       marginRight="10px"
                       isDisabled={user?.noMiddleName}
                     />
-                    <Checkbox
-                      ml="2px"
-                      defaultChecked={user?.noMiddleName}
-                    ></Checkbox>
-                    <Text>No middle name</Text>
+                    <Checkbox ml="2px" defaultChecked={user?.noMiddleName}>
+                      No middle name
+                    </Checkbox>
                   </InputGroup>
+                  <InputControl
+                    isRequired
+                    id="lasstName"
+                    name="lasstName"
+                    label="Last name"
+                    marginRight="10px"
+                  />
                 </Box>
               </Box>
             )}
           </Formik>
         </Box>
-        {user?.noMiddleName ? null : (
-          <Text>Middle name: {user?.middleName}</Text>
-        )}
-        <Text>Last name: {user?.lastName}</Text>
       </Box>
       <Box>
         <Text>Change your password:</Text>
