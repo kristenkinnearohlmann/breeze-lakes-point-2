@@ -87,10 +87,6 @@ const Profile = () => {
           </Formik>
         </Box>
       </Box>
-      <Box>
-        <Text>Change your password:</Text>
-        <Text>pwd</Text>
-      </Box>
     </div>
   );
 };
