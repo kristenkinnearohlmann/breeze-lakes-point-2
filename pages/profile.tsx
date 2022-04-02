@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { useMe } from "../lib/hooks";
 import { Formik } from "formik";
 import { InputControl } from "formik-chakra-ui";
-import { InputGroup } from "@chakra-ui/react";
+import { Checkbox, InputGroup } from "@chakra-ui/react";
 
 const Profile = () => {
   const { user } = useMe();
@@ -70,6 +70,10 @@ const Profile = () => {
                       marginRight="10px"
                       isDisabled={user?.noMiddleName}
                     />
+                    <Checkbox
+                      ml="2px"
+                      defaultChecked={user?.noMiddleName}
+                    ></Checkbox>
                     <Text>No middle name</Text>
                   </InputGroup>
                 </Box>
