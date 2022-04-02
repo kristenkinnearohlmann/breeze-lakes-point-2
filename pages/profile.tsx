@@ -77,7 +77,7 @@ const Profile = () => {
                   <InputControl
                     isRequired
                     id="lasstName"
-                    name="lasstName"
+                    name="lastName"
                     label="Last name"
                     marginRight="10px"
                   />
