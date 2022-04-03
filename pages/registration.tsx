@@ -177,6 +177,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     name="preferredName"
                     label="Preferred name"
                   />
+                  <Text>Pronoun</Text>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">
