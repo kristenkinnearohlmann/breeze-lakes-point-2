@@ -61,6 +61,7 @@ const Profile = () => {
                     name="firstName"
                     label="First name"
                     marginRight="10px"
+                    isDisabled={true}
                   />
                   <InputGroup>
                     <InputControl
@@ -80,6 +81,7 @@ const Profile = () => {
                     name="lastName"
                     label="Last name"
                     marginRight="10px"
+                    isDisabled={true}
                   />
                 </Box>
               </Box>
