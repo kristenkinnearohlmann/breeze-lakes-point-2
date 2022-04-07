@@ -7,7 +7,9 @@ const UserHeader = ({ user }: { user: any }) => {
         <Text fontSize="3xl" marginRight="15px">
           {user?.firstName} {user?.lastName}
         </Text>
-        <Text fontSize="large">{user?.role.toLowerCase()}</Text>
+        <Text bgColor="gray.500" fontSize="large" padding="4px">
+          {user?.role.toLowerCase()}
+        </Text>
       </Flex>
       <Divider />
     </Box>
