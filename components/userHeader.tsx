@@ -7,7 +7,14 @@ const UserHeader = ({ user }: { user: any }) => {
         <Text fontSize="3xl" marginRight="15px">
           {user?.firstName} {user?.lastName}
         </Text>
-        <Text bgColor="gray.500" fontSize="large" padding="4px">
+        <Text
+          bgColor="gray.500"
+          borderRadius="10px"
+          border="1px solid white"
+          fontSize="large"
+          paddingX="10px"
+          paddingY="2px"
+        >
           {user?.role.toLowerCase()}
         </Text>
       </Flex>
