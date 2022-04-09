@@ -84,6 +84,7 @@ const Profile = () => {
                     isDisabled={true}
                   />
                 </Box>
+                <Box>{user?.role}</Box>
               </Box>
             )}
           </Formik>
