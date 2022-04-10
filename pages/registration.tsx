@@ -3,7 +3,12 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe, useUser } from "../lib/hooks";
-import { InputControl, SubmitButton } from "formik-chakra-ui";
+import {
+  InputControl,
+  SubmitButton,
+  SelectControl,
+  SelectControlProps,
+} from "formik-chakra-ui";
 import { Checkbox } from "@chakra-ui/react";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
@@ -178,6 +183,14 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     label="Preferred name"
                   />
                   <Text>Pronoun</Text>
+                  <SelectControl
+                    name="pronoun"
+                    selectProps={{ placeholder: "" }}
+                  >
+                    <option value="1">she/her</option>
+                    <option value="2">he/him</option>
+                    <option value="3">they/them</option>
+                  </SelectControl>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">
