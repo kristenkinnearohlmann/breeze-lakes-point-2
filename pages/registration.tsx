@@ -191,6 +191,11 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     <option value="2">he/him</option>
                     <option value="3">they/them</option>
                   </SelectControl>
+                  <select className="bgtransparent">
+                    <option value="1">she/her</option>
+                    <option value="2">he/him</option>
+                    <option value="3">they/them</option>
+                  </select>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">
