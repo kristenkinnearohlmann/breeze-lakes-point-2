@@ -182,20 +182,20 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     name="preferredName"
                     label="Preferred name"
                   />
-                  <Text>Pronoun</Text>
-                  <SelectControl
-                    name="pronoun"
-                    selectProps={{ placeholder: "" }}
-                  >
-                    <option value="1">she/her</option>
-                    <option value="2">he/him</option>
-                    <option value="3">they/them</option>
-                  </SelectControl>
-                  <select className="bgtransparent">
-                    <option value="1">she/her</option>
-                    <option value="2">he/him</option>
-                    <option value="3">they/them</option>
-                  </select>
+                  <label>
+                    Pronoun
+                    <select className="bgtransparent form-element">
+                      <option className="bgtransparent-child" value="1">
+                        she/her
+                      </option>
+                      <option className="bgtransparent-child" value="2">
+                        he/him
+                      </option>
+                      <option className="bgtransparent-child" value="3">
+                        they/them
+                      </option>
+                    </select>
+                  </label>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">

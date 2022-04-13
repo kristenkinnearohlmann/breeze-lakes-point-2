@@ -17,5 +17,14 @@ a {
 }
 
 .bgtransparent {
+  background-color: transparent;
+}
+
+.bgtransparent-child {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.form-element {
+  border: 1px solid #fff;
+  margin-top: 10px;
 }
