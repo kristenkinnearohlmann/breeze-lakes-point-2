@@ -108,6 +108,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     event.preventDefault;
     console.log("Submitted values");
     console.log(values);
+    console.log(document.getElementById("pronoun"));
   };
 
   return (
@@ -184,7 +185,11 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   />
                   <label>
                     Pronoun
-                    <select className="bgtransparent form-element">
+                    <select
+                      className="bgtransparent form-element"
+                      id="pronoun"
+                      name="pronoun"
+                    >
                       <option
                         className="bgtransparent-child"
                         value="0"
