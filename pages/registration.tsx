@@ -185,6 +185,13 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   <label>
                     Pronoun
                     <select className="bgtransparent form-element">
+                      <option
+                        className="bgtransparent-child"
+                        value="0"
+                        selected
+                      >
+                        &nbsp;
+                      </option>
                       <option className="bgtransparent-child" value="1">
                         she/her
                       </option>
