@@ -3,13 +3,8 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import UserHeader from "../components/userHeader";
 import { useMe, useUser } from "../lib/hooks";
-import {
-  InputControl,
-  SubmitButton,
-  SelectControl,
-  SelectControlProps,
-} from "formik-chakra-ui";
-import { Checkbox, Select } from "@chakra-ui/react";
+import { InputControl, SubmitButton, SelectControl } from "formik-chakra-ui";
+import { Checkbox } from "@chakra-ui/react";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
