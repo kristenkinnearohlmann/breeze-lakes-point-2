@@ -106,7 +106,6 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     event.preventDefault;
     console.log("Submitted values");
     console.log(values);
-    console.log(document.getElementById("pronoun"));
   };
 
   return (
@@ -181,7 +180,12 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     name="preferredName"
                     label="Preferred name"
                   />
-                  <SelectControl name="pronoun" id="pronoun" label="Pronoun">
+                  <SelectControl
+                    name="pronoun"
+                    id="pronoun"
+                    label="Pronoun"
+                    marginLeft="10px"
+                  >
                     <option style={{ backgroundColor: "gray" }} value="0">
                       &nbsp;
                     </option>
