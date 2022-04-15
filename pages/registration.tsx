@@ -9,7 +9,7 @@ import {
   SelectControl,
   SelectControlProps,
 } from "formik-chakra-ui";
-import { Checkbox } from "@chakra-ui/react";
+import { Checkbox, Select } from "@chakra-ui/react";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
@@ -85,6 +85,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     noMiddleName: false,
     lastName: "",
     preferredName: "",
+    pronoun: 0,
   };
 
   const userValues = {
@@ -93,6 +94,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     noMiddleName: user?.noMiddleName || false.valueOf,
     lastName: user?.lastName || "",
     preferredName: "",
+    pronoun: 0,
   };
 
   const getData = () => (user?.id ? userValues : initialValues);
@@ -102,6 +104,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     middleName: Yup.string().nullable(),
     lastName: Yup.string().required(),
     preferredName: Yup.string().nullable(),
+    pronoun: Yup.number(),
   });
 
   const onSubmit = (values) => {
@@ -183,31 +186,20 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     name="preferredName"
                     label="Preferred name"
                   />
-                  <label>
-                    Pronoun
-                    <select
-                      className="bgtransparent form-element"
-                      id="pronoun"
-                      name="pronoun"
-                    >
-                      <option
-                        className="bgtransparent-child"
-                        value="0"
-                        selected
-                      >
-                        &nbsp;
-                      </option>
-                      <option className="bgtransparent-child" value="1">
-                        she/her
-                      </option>
-                      <option className="bgtransparent-child" value="2">
-                        he/him
-                      </option>
-                      <option className="bgtransparent-child" value="3">
-                        they/them
-                      </option>
-                    </select>
-                  </label>
+                  <SelectControl name="pronoun" id="pronoun" label="Pronoun">
+                    <option style={{ backgroundColor: "gray" }} value="0">
+                      &nbsp;
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="1">
+                      she/her
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="2">
+                      he/him
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="3">
+                      they/them
+                    </option>
+                  </SelectControl>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">
