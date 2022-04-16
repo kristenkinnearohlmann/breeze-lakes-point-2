@@ -89,7 +89,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     noMiddleName: user?.noMiddleName || false.valueOf,
     lastName: user?.lastName || "",
     preferredName: "",
-    pronoun: 0,
+    pronoun: user?.pronoun || 0,
   };
 
   const getData = () => (user?.id ? userValues : initialValues);
