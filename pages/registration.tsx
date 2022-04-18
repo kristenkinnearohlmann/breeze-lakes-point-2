@@ -178,7 +178,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   <InputControl
                     id="preferredName"
                     name="preferredName"
-                    label="Preferred name"
+                    label="Preferred name (the name you would like to use in conversation)"
                   />
                   <SelectControl
                     name="pronoun"
