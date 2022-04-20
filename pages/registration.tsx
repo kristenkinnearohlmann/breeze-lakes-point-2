@@ -205,6 +205,18 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     <option style={{ backgroundColor: "gray" }} value="0">
                       &nbsp;
                     </option>
+                    <option style={{ backgroundColor: "gray" }} value="1">
+                      Under 16
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="2">
+                      16+
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="3">
+                      18+
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="4">
+                      21+
+                    </option>
                   </SelectControl>
                 </Flex>
               </Box>
