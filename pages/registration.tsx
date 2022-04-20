@@ -81,6 +81,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     lastName: "",
     preferredName: "",
     pronoun: 0,
+    age: 0,
   };
 
   const userValues = {
@@ -90,6 +91,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     lastName: user?.lastName || "",
     preferredName: "",
     pronoun: user?.pronoun || 0,
+    age: user?.age || 0,
   };
 
   const getData = () => (user?.id ? userValues : initialValues);
@@ -100,6 +102,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     lastName: Yup.string().required(),
     preferredName: Yup.string().nullable(),
     pronoun: Yup.number(),
+    age: Yup.number(),
   });
 
   const onSubmit = (values) => {
