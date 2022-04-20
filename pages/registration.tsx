@@ -182,12 +182,14 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     id="preferredName"
                     name="preferredName"
                     label="Preferred name (the name you would like to use in conversation)"
+                    width="100rem"
                   />
                   <SelectControl
                     name="pronoun"
                     id="pronoun"
                     label="Pronoun"
                     marginLeft="10px"
+                    width="25rem"
                   >
                     <option style={{ backgroundColor: "gray" }} value="0">
                       &nbsp;
@@ -202,9 +204,13 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       they/them
                     </option>
                   </SelectControl>
-                </Flex>
-                <Flex>
-                  <SelectControl name="age" id="age" label="Age">
+                  <SelectControl
+                    name="age"
+                    id="age"
+                    label="Age"
+                    marginLeft="10px"
+                    width="15rem"
+                  >
                     <option style={{ backgroundColor: "gray" }} value="0">
                       &nbsp;
                     </option>
