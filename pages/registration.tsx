@@ -178,12 +178,19 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   />
                 </Flex>
                 <Flex>
-                  <InputControl
-                    id="preferredName"
-                    name="preferredName"
-                    label="Preferred name (the name you would like to use in conversation)"
-                    width="100rem"
-                  />
+                  <Flex flexFlow="column nowrap" fontWeight="500">
+                    <label htmlFor="preferredName">
+                      Preferred name
+                      <br />
+                      (the name you would like to use in conversation)
+                    </label>
+                    <InputControl
+                      id="preferredName"
+                      name="preferredName"
+                      // label="Preferred name (the name you would like to use in conversation)"
+                      width="75rem"
+                    />
+                  </Flex>
                   <SelectControl
                     name="pronoun"
                     id="pronoun"
