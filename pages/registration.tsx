@@ -243,7 +243,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   marginBottom="1rem"
                   paddingBottom="10px"
                 >
-                  Remaining Form Fields
+                  Contact Information
                 </Text>
               </Box>
               <Box paddingTop="10px">
