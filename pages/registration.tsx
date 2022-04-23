@@ -245,6 +245,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                 >
                   Contact Information
                 </Text>
+                <Flex></Flex>
               </Box>
               <Box paddingTop="10px">
                 <SubmitButton>Submit</SubmitButton>
