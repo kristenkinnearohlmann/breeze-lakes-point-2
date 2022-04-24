@@ -50,6 +50,7 @@ const run = async () => {
       firstName: "Sample",
       lastName: "User",
       middleName: "S",
+      preferredName: "Sam",
     },
   });
 };
