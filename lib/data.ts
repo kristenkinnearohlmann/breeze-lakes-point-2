@@ -33,6 +33,7 @@ const userData = async (qry) => {
       lastName: true,
       middleName: true,
       noMiddleName: true,
+      preferredName: true,
     },
   });
 
