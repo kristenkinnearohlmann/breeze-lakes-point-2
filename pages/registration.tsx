@@ -89,7 +89,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     middleName: user?.middleName || "",
     noMiddleName: user?.noMiddleName || false.valueOf,
     lastName: user?.lastName || "",
-    preferredName: "",
+    preferredName: user?.preferredName || "",
     pronoun: user?.pronoun || 0,
     age: user?.age || 0,
   };
