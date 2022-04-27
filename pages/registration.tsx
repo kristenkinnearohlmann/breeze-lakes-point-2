@@ -73,7 +73,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     "WI",
     "WY",
   ];
-
+  // TODO: Implement pronouns in model, seed, data and reg
   const initialValues = {
     firstName: "",
     middleName: "",
