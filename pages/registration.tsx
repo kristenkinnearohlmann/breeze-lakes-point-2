@@ -5,74 +5,13 @@ import UserHeader from "../components/userHeader";
 import { useMe, useUser } from "../lib/hooks";
 import { InputControl, SubmitButton, SelectControl } from "formik-chakra-ui";
 import { Checkbox } from "@chakra-ui/react";
+import { stateAbbreviations } from "../assets/stateAbbreviations";
 
 const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
   const dataUserId = selectedUserId || user?.id;
   const { userData } = useUser(dataUserId);
-  console.log("New useUser", userData);
 
-  const stateAbbrevs = [
-    "AL",
-    "AK",
-    "AS",
-    "AZ",
-    "AR",
-    "CA",
-    "CO",
-    "CT",
-    "DE",
-    "DC",
-    "FM",
-    "FL",
-    "GA",
-    "GU",
-    "HI",
-    "ID",
-    "IL",
-    "IN",
-    "IA",
-    "KS",
-    "KY",
-    "LA",
-    "ME",
-    "MH",
-    "MD",
-    "MA",
-    "MI",
-    "MN",
-    "MS",
-    "MO",
-    "MT",
-    "NE",
-    "NV",
-    "NH",
-    "NJ",
-    "NM",
-    "NY",
-    "NC",
-    "ND",
-    "MP",
-    "OH",
-    "OK",
-    "OR",
-    "PW",
-    "PA",
-    "PR",
-    "RI",
-    "SC",
-    "SD",
-    "TN",
-    "TX",
-    "UT",
-    "VT",
-    "VI",
-    "VA",
-    "WA",
-    "WV",
-    "WI",
-    "WY",
-  ];
   // TODO: Implement pronouns in model, seed, data and reg
   const initialValues = {
     firstName: "",
