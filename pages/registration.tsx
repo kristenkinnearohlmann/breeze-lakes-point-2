@@ -186,7 +186,17 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                 </Text>
                 <Flex>
                   <SelectControl name="state" id="state" label="State">
-                    <option>&nbsp;</option>
+                    <option style={{ backgroundColor: "gray" }} value="">
+                      &nbsp;
+                    </option>
+                    {stateAbbreviations.map((abbrev) => (
+                      <option
+                        style={{ backgroundColor: "gray" }}
+                        value={abbrev}
+                      >
+                        {abbrev}
+                      </option>
+                    ))}
                   </SelectControl>
                 </Flex>
               </Box>
