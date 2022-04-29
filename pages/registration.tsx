@@ -184,7 +184,11 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                 >
                   Contact Information
                 </Text>
-                <Flex></Flex>
+                <Flex>
+                  <SelectControl name="state" id="state" label="State">
+                    <option>&nbsp;</option>
+                  </SelectControl>
+                </Flex>
               </Box>
               <Box paddingTop="10px">
                 <SubmitButton>Submit</SubmitButton>
