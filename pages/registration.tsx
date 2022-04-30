@@ -185,7 +185,12 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   Contact Information
                 </Text>
                 <Flex>
-                  <SelectControl name="state" id="state" label="State">
+                  <SelectControl
+                    name="state"
+                    id="state"
+                    label="State"
+                    width="15rem"
+                  >
                     <option style={{ backgroundColor: "gray" }} value="">
                       &nbsp;
                     </option>
