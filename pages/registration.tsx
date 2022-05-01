@@ -185,6 +185,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   Contact Information
                 </Text>
                 <Flex>
+                  {/* TODO: Use Position Stack forward geocoding for address? */}
                   <SelectControl
                     name="state"
                     id="state"
