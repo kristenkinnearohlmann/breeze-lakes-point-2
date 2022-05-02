@@ -130,6 +130,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       width="75rem"
                     />
                   </Flex>
+                  {/* TODO: Add enum? */}
                   <SelectControl
                     name="pronoun"
                     id="pronoun"
@@ -150,6 +151,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       they/them
                     </option>
                   </SelectControl>
+                  {/* TODO: Add enum? */}
                   <SelectControl
                     name="age"
                     id="age"
