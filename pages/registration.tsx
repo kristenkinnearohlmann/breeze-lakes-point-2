@@ -21,6 +21,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     preferredName: "",
     pronoun: 0,
     age: 0,
+    phone1: "",
+    phone2: "",
   };
 
   const userValues = {
@@ -31,6 +33,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     preferredName: user?.preferredName || "",
     pronoun: user?.pronoun || 0,
     age: user?.age || 0,
+    phone1: user?.phone1 || "",
+    phone2: user?.phone2 || "",
   };
 
   const getData = () => (user?.id ? userValues : initialValues);
@@ -42,6 +46,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     preferredName: Yup.string().nullable(),
     pronoun: Yup.number(),
     age: Yup.number(),
+    phone1: Yup.string().required(),
+    phone2: Yup.string().nullable(),
   });
 
   const onSubmit = (values) => {
@@ -186,6 +192,23 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                 >
                   Contact Information
                 </Text>
+                <Flex>
+                  <InputControl
+                    isRequired
+                    id="phone1"
+                    name="phone1"
+                    label="Best Contact Phone Number"
+                    inputMode="tel"
+                  />
+                  <InputControl
+                    isRequired
+                    id="phone2"
+                    name="phone2"
+                    label="Alternate Contact Phone Number"
+                    inputMode="tel"
+                    marginLeft="10px"
+                  />
+                </Flex>
                 <Flex>
                   {/* TODO: Use Position Stack forward geocoding for address? */}
                   <SelectControl
