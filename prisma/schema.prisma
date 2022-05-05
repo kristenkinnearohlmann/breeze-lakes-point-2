@@ -37,3 +37,9 @@ enum Role {
   Admin
   SuperAdmin
 }
+
+enum Pronoun {
+  sheHer
+  heHim
+  theyThem
+}
