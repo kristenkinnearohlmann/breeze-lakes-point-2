@@ -25,6 +25,8 @@ model User {
   noMiddleName  Boolean  @default(false)
   role          Role     @default(User)
   preferredName String?
+  pronoun       Pronoun
+  age           Age
 }
 
 model Schedule {

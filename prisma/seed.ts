@@ -15,6 +15,8 @@ const run = async () => {
       firstName: "Test",
       lastName: "User",
       noMiddleName: true,
+      pronoun: "theyThem",
+      age: "twentyonePlus",
     },
   });
   const user2 = await prisma.user.upsert({
@@ -27,6 +29,8 @@ const run = async () => {
       lastName: "Super",
       role: "SuperAdmin",
       noMiddleName: true,
+      pronoun: "theyThem",
+      age: "twentyonePlus",
     },
   });
   const user3 = await prisma.user.upsert({
@@ -38,6 +42,8 @@ const run = async () => {
       firstName: "Mr",
       lastName: "Dad",
       noMiddleName: true,
+      pronoun: "heHim",
+      age: "twentyonePlus",
     },
   });
   const user4 = await prisma.user.upsert({
@@ -51,6 +57,8 @@ const run = async () => {
       lastName: "User",
       middleName: "S",
       preferredName: "Sam",
+      pronoun: "sheHer",
+      age: "eighteenPlus",
     },
   });
 };
