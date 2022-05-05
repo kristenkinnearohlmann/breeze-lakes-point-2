@@ -43,3 +43,10 @@ enum Pronoun {
   heHim
   theyThem
 }
+
+enum Age {
+  underSixteen
+  sixteenPlus
+  eighteenPlus
+  twentyonePlus
+}
