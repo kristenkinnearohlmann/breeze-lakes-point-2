@@ -41,14 +41,16 @@ enum Role {
 }
 
 enum Pronoun {
-  sheHer
-  heHim
-  theyThem
+  SheHer
+  HeHim
+  TheyThem
+  NotApplicable
 }
 
 enum Age {
-  underSixteen
-  sixteenPlus
-  eighteenPlus
-  twentyonePlus
+  UnderSixteen
+  SixteenPlus
+  EighteenPlus
+  TwentyonePlus
+  NotApplicable
 }
