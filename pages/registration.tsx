@@ -44,8 +44,8 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     middleName: Yup.string().nullable(),
     lastName: Yup.string().required(),
     preferredName: Yup.string().nullable(),
-    pronoun: Yup.number(),
-    age: Yup.number(),
+    pronoun: Yup.string(),
+    age: Yup.string(),
     phone1: Yup.string().required(),
     phone2: Yup.string().nullable(),
   });
@@ -123,7 +123,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   />
                 </Flex>
                 <Flex>
-                  <Flex flexFlow="column nowrap" fontWeight="500">
+                  <Flex flexFlow="column nowrap" fontWeight="500" width="50rem">
                     <label htmlFor="preferredName">
                       Preferred name
                       <br />
@@ -133,7 +133,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       id="preferredName"
                       name="preferredName"
                       // label="Preferred name (the name you would like to use in conversation)"
-                      width="75rem"
+                      width="50rem"
                     />
                   </Flex>
                   {/* TODO: Add enum? */}
@@ -142,18 +142,21 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     id="pronoun"
                     label="Pronoun"
                     marginLeft="10px"
-                    width="25rem"
+                    width="10rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="0">
+                    <option style={{ backgroundColor: "gray" }} value="">
                       &nbsp;
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="1">
+                    <option style={{ backgroundColor: "gray" }} value="SheHer">
                       she/her
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="2">
+                    <option style={{ backgroundColor: "gray" }} value="HeHim">
                       he/him
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="3">
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="TheyThem"
+                    >
                       they/them
                     </option>
                   </SelectControl>
@@ -163,21 +166,33 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     id="age"
                     label="Age"
                     marginLeft="10px"
-                    width="15rem"
+                    width="8rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="0">
+                    <option style={{ backgroundColor: "gray" }} value="">
                       &nbsp;
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="1">
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="UnderSixteen"
+                    >
                       Under 16
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="2">
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="SixteenPlus"
+                    >
                       16+
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="3">
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="EighteenPlus"
+                    >
                       18+
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="4">
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="TwentyonePlus"
+                    >
                       21+
                     </option>
                   </SelectControl>

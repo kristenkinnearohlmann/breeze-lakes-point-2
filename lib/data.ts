@@ -34,6 +34,8 @@ const userData = async (qry) => {
       middleName: true,
       noMiddleName: true,
       preferredName: true,
+      pronoun: true,
+      age: true,
     },
   });
 
