@@ -193,6 +193,17 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       21+
                     </option>
                   </SelectControl>
+                  <SelectControl
+                    name="ethnicity"
+                    id="ethnicity"
+                    label="Ethnicity"
+                    marginLeft="10px"
+                    width="8rem"
+                  >
+                    <option style={{ backgroundColor: "gray" }} value="Asian">
+                      Asian
+                    </option>
+                  </SelectControl>
                 </Flex>
               </Box>
               <Box marginBottom="1rem">
