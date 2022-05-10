@@ -54,3 +54,13 @@ enum Age {
   TwentyonePlus
   NotApplicable
 }
+
+enum Ethnicity {
+  Asian
+  Black
+  HispanicLatino
+  NativeIndigenous
+  White
+  NotSpecified
+  NotApplicable
+}
