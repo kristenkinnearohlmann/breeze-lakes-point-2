@@ -132,11 +132,9 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     <InputControl
                       id="preferredName"
                       name="preferredName"
-                      // label="Preferred name (the name you would like to use in conversation)"
                       width="50rem"
                     />
                   </Flex>
-                  {/* TODO: Add enum? */}
                   <SelectControl
                     name="pronoun"
                     id="pronoun"
@@ -160,7 +158,6 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                       they/them
                     </option>
                   </SelectControl>
-                  {/* TODO: Add enum? */}
                   <SelectControl
                     name="age"
                     id="age"
