@@ -17,6 +17,7 @@ const run = async () => {
       noMiddleName: true,
       pronoun: "TheyThem",
       age: "TwentyonePlus",
+      ethnicity: "NotSpecified",
     },
   });
   const user2 = await prisma.user.upsert({
@@ -31,6 +32,7 @@ const run = async () => {
       noMiddleName: true,
       pronoun: "NotApplicable",
       age: "NotApplicable",
+      ethnicity: "NotApplicable",
     },
   });
   const user3 = await prisma.user.upsert({
@@ -44,6 +46,7 @@ const run = async () => {
       noMiddleName: true,
       pronoun: "HeHim",
       age: "TwentyonePlus",
+      ethnicity: "White",
     },
   });
   const user4 = await prisma.user.upsert({
@@ -59,6 +62,7 @@ const run = async () => {
       preferredName: "Sam",
       pronoun: "SheHer",
       age: "EighteenPlus",
+      ethnicity: "Black",
     },
   });
 };
