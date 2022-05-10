@@ -223,9 +223,9 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     </option>
                     <option
                       style={{ backgroundColor: "gray" }}
-                      value="PreferNotToSay"
+                      value="NotSpecified"
                     >
-                      Prefer not to say
+                      Not specified
                     </option>
                   </SelectControl>
                 </Flex>
