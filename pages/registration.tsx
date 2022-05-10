@@ -198,10 +198,34 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     id="ethnicity"
                     label="Ethnicity"
                     marginLeft="10px"
-                    width="8rem"
+                    width="12rem"
                   >
                     <option style={{ backgroundColor: "gray" }} value="Asian">
                       Asian
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="Black">
+                      Black
+                    </option>
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="HispanicLatino"
+                    >
+                      Hispanic or Latino
+                    </option>
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="NativeIndigenous"
+                    >
+                      Native or Indigenous
+                    </option>
+                    <option style={{ backgroundColor: "gray" }} value="White">
+                      White
+                    </option>
+                    <option
+                      style={{ backgroundColor: "gray" }}
+                      value="PreferNotToSay"
+                    >
+                      Prefer not to say
                     </option>
                   </SelectControl>
                 </Flex>
