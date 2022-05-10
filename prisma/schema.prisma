@@ -13,20 +13,21 @@ datasource db {
 }
 
 model User {
-  id            String   @id @default(uuid())
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  username      String   @unique
+  id            String    @id @default(uuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  username      String    @unique
   password      String
   email         String?
   firstName     String
   middleName    String?
   lastName      String
-  noMiddleName  Boolean  @default(false)
-  role          Role     @default(User)
+  noMiddleName  Boolean   @default(false)
+  role          Role      @default(User)
   preferredName String?
   pronoun       Pronoun
   age           Age
+  ethnicity     Ethnicity
 }
 
 model Schedule {
