@@ -21,6 +21,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     preferredName: "",
     pronoun: 0,
     age: 0,
+    ethnicity: "",
     phone1: "",
     phone2: "",
   };
@@ -31,8 +32,9 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     noMiddleName: user?.noMiddleName || false.valueOf,
     lastName: user?.lastName || "",
     preferredName: user?.preferredName || "",
-    pronoun: user?.pronoun || 0,
-    age: user?.age || 0,
+    pronoun: user?.pronoun || "",
+    age: user?.age || "",
+    ethnicity: user?.ethnicity || "",
     phone1: user?.phone1 || "",
     phone2: user?.phone2 || "",
   };
@@ -46,6 +48,7 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
     preferredName: Yup.string().nullable(),
     pronoun: Yup.string(),
     age: Yup.string(),
+    ethnicity: Yup.string(),
     phone1: Yup.string().required(),
     phone2: Yup.string().nullable(),
   });
