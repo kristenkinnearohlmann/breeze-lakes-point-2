@@ -52,6 +52,11 @@ const LeftNav = ({ user }: { user: any }) => {
     router.push("/signin");
   };
 
+  console.log(user, user?.role);
+  console.log(!!user);
+
+  let userRole = user?.role || "";
+
   return (
     <Box
       height="calc(100vh - 90px)"
@@ -80,7 +85,7 @@ const LeftNav = ({ user }: { user: any }) => {
             ))}
           </List>
         </Box>
-        {(user && user?.role) === "User" ? null : (
+        {user && userRole === "User" ? null : (
           <Box marginTop="10px">
             <List borderTop="2px solid grey" marginTop="10px" spacing={2}>
               {navMenuAdmin.map((menu) => (
