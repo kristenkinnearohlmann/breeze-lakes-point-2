@@ -12,7 +12,6 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const dataUserId = selectedUserId || user?.id;
   const { userData } = useUser(dataUserId);
 
-  // TODO: Implement pronouns in model, seed, data and reg
   const initialValues = {
     firstName: "",
     middleName: "",

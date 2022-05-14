@@ -52,9 +52,6 @@ const LeftNav = ({ user }: { user: any }) => {
     router.push("/signin");
   };
 
-  console.log(user, user?.role);
-  console.log(!!user);
-
   let userRole = user?.role || "";
 
   return (
