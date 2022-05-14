@@ -259,6 +259,14 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                   />
                 </Flex>
                 <Flex>
+                  <InputControl
+                    id="email"
+                    name="email"
+                    label="Email"
+                    inputMode="email"
+                  />
+                </Flex>
+                <Flex>
                   {/* TODO: Use Position Stack forward geocoding for address? */}
                   <SelectControl
                     name="state"
