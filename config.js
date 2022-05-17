@@ -1,3 +1,3 @@
-const adminUsers = ["Admin", "SuperAdmin"];
+const adminRoles = ["Admin", "SuperAdmin"];
 
-export { adminUsers };
+export { adminRoles };
