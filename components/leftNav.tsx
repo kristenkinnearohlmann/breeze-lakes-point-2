@@ -53,9 +53,6 @@ const LeftNav = ({ user }: { user: any }) => {
     router.push("/signin");
   };
 
-  console.log(adminRoles);
-  let userRole = user?.role || "";
-
   return (
     <Box
       height="calc(100vh - 90px)"
@@ -84,8 +81,6 @@ const LeftNav = ({ user }: { user: any }) => {
             ))}
           </List>
         </Box>
-        <Box>{user?.role}</Box>
-        <Box>{adminRoles.includes(user?.role) ? "Admin" : "User"}</Box>
         {adminRoles.includes(user?.role) ? (
           <Box marginTop="10px">
             <List borderTop="2px solid grey" marginTop="10px" spacing={2}>
