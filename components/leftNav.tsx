@@ -15,6 +15,7 @@ import { MdOutlineLogout } from "react-icons/md";
 import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
 import { signout } from "../lib/mutations";
 import { useRouter } from "next/router";
+import { adminUsers } from "../config";
 
 const navMenu = [
   {
@@ -52,6 +53,7 @@ const LeftNav = ({ user }: { user: any }) => {
     router.push("/signin");
   };
 
+  console.log(adminUsers);
   let userRole = user?.role || "";
 
   return (
@@ -82,6 +84,8 @@ const LeftNav = ({ user }: { user: any }) => {
             ))}
           </List>
         </Box>
+        <Box>{user?.role}</Box>
+        <Box>{adminUsers.includes(user?.role) ? "Admin" : "User"}</Box>
         {user && userRole === "User" ? null : (
           <Box marginTop="10px">
             <List borderTop="2px solid grey" marginTop="10px" spacing={2}>
