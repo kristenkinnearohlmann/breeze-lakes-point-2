@@ -9,39 +9,39 @@ import {
 import { Icon } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { AiOutlineDashboard } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+// import { AiOutlineDashboard } from "react-icons/ai";
+// import { CgProfile } from "react-icons/cg";
 import { MdOutlineLogout } from "react-icons/md";
-import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
+// import { RiAdminLine, RiFileEditLine } from "react-icons/ri";
 import { signout } from "../lib/mutations";
 import { useRouter } from "next/router";
-import { adminRoles } from "../config";
+import { adminRoles, navMenu, navMenuAdmin } from "../config";
 
-const navMenu = [
-  {
-    name: "Dashboard",
-    icon: AiOutlineDashboard,
-    route: "/",
-  },
-  {
-    name: "Registration",
-    icon: RiFileEditLine,
-    route: "/registration",
-  },
-  {
-    name: "Profile",
-    icon: CgProfile,
-    route: "/profile",
-  },
-];
+// const navMenu = [
+//   {
+//     name: "Dashboard",
+//     icon: AiOutlineDashboard,
+//     route: "/",
+//   },
+//   {
+//     name: "Registration",
+//     icon: RiFileEditLine,
+//     route: "/registration",
+//   },
+//   {
+//     name: "Profile",
+//     icon: CgProfile,
+//     route: "/profile",
+//   },
+// ];
 
-const navMenuAdmin = [
-  {
-    name: "Admin",
-    icon: RiAdminLine,
-    route: "/admin",
-  },
-];
+// const navMenuAdmin = [
+//   {
+//     name: "Admin",
+//     icon: RiAdminLine,
+//     route: "/admin",
+//   },
+// ];
 
 const LeftNav = ({ user }: { user: any }) => {
   const router = useRouter();
