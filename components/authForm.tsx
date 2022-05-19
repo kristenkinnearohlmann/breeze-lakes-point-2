@@ -51,6 +51,8 @@ const AuthForm = ({ mode }: { mode: any }) => {
 
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
+      console.log(user);
+      console.log(user.status);
     } else {
       const user = await auth(mode, {
         username,
@@ -79,6 +81,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
       </Flex>
       <Flex justify="center" align="center" height="calc(100vh - 215px)">
         <Box padding="50px" bg="gray.600" borderRadius="6px">
+          <Text>Hello</Text>
           <form onSubmit={handleSubmit}>
             <InputGroup>
               <Input
