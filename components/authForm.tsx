@@ -63,6 +63,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
       });
     }
     setIsLoading(false);
+    // TODO: Handle returned error here?
     router.push("/");
   };
 
