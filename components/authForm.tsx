@@ -54,9 +54,9 @@ const AuthForm = ({ mode }: { mode: any }) => {
 
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
-      if (user.error) {
-        errorMsg.innerText = user.error;
-      }
+      // if (user.error) {
+      //   errorMsg.innerText = user.error;
+      // }
     } else {
       const user = await auth(mode, {
         username,
