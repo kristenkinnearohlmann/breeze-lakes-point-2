@@ -49,8 +49,8 @@ const AuthForm = ({ mode }: { mode: any }) => {
     e.preventDefault();
     setIsLoading(true);
 
-    const errorMsg = document.getElementById("errormsg");
-    errorMsg.innerHTML = "";
+    // const errorMsg = document.getElementById("errormsg");
+    // errorMsg.innerHTML = "";
 
     if (mode === "signin") {
       const user = await auth(mode, { username, password });
