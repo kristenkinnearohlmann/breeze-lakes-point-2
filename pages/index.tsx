@@ -10,6 +10,12 @@ const Home: NextPage = () => {
     <div>
       <UserHeader user={user}></UserHeader>
       <Dashboard user={user}></Dashboard>
+      <p>sample</p>
+      <style jsx>{`
+        P {
+          background-color: red;
+        }
+      `}</style>
     </div>
   );
 };
