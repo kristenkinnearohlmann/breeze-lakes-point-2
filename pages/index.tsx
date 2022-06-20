@@ -14,6 +14,7 @@ const Home: NextPage = () => {
       <style jsx>{`
         P {
           background-color: red;
+          font-size: 5em;
         }
       `}</style>
     </div>
