@@ -147,17 +147,26 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     marginLeft="10px"
                     width="10rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value=""
+                    >
                       &nbsp;
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="SheHer">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value="SheHer"
+                    >
                       she/her
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="HeHim">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value="HeHim"
+                    >
                       he/him
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="TheyThem"
                     >
                       they/them
@@ -170,29 +179,32 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     marginLeft="10px"
                     width="8rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value=""
+                    >
                       &nbsp;
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="UnderSixteen"
                     >
                       Under 16
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="SixteenPlus"
                     >
                       16+
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="EighteenPlus"
                     >
                       18+
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="TwentyonePlus"
                     >
                       21+
@@ -205,29 +217,38 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     marginLeft="10px"
                     width="12rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="Asian">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value="Asian"
+                    >
                       Asian
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="Black">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value="Black"
+                    >
                       Black
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="HispanicLatino"
                     >
                       Hispanic or Latino
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="NativeIndigenous"
                     >
                       Native or Indigenous
                     </option>
-                    <option style={{ backgroundColor: "gray" }} value="White">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value="White"
+                    >
                       White
                     </option>
                     <option
-                      style={{ backgroundColor: "gray" }}
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
                       value="NotSpecified"
                     >
                       Not specified
