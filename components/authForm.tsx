@@ -81,9 +81,16 @@ const AuthForm = ({ mode }: { mode: any }) => {
         paddingX="10px"
       >
         <NextImage src="/logo.png" height={194} width={160} />
-        <Text fontSize="3xl">Breeze Lakes Point</Text>
+        <Text fontSize="3xl" marginLeft={5}>
+          Breeze Lakes Point
+        </Text>
       </Flex>
-      <Flex justify="center" align="center" height="calc(100vh - 215px)">
+      <Flex
+        className="form-container"
+        justify="center"
+        align="center"
+        height="calc(100vh - 215px)"
+      >
         <Box padding="50px" bg="gray.600" borderRadius="6px">
           <Text id="errormsg" height="1rem" marginBottom="0.5rem"></Text>
           <form onSubmit={handleSubmit}>
@@ -199,6 +206,10 @@ const AuthForm = ({ mode }: { mode: any }) => {
           </form>
         </Box>
       </Flex>
+      <style jsx>{`
+        .form-container {
+        }
+      `}</style>
     </Box>
   );
 };

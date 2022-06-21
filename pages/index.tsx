@@ -12,6 +12,9 @@ const Home: NextPage = () => {
       <Dashboard user={user}></Dashboard>
       <p>This is a placeholder for a sample JSX declaration.</p>
       <style jsx>{`
+        * {
+          box-sizing: border-box;
+        }
         p {
           background-color: blueviolet;
           font-size: 2.5em;
