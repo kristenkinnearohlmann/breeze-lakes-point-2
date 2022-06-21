@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Dashboard user={user}></Dashboard>
       <p>sample</p>
       <style jsx>{`
-        P {
+        p {
           background-color: red;
           font-size: 5em;
         }

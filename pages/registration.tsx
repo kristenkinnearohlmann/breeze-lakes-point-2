@@ -11,6 +11,9 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
   const { user } = useMe();
   const dataUserId = selectedUserId || user?.id;
   const { userData } = useUser(dataUserId);
+  const colorScheme = {
+    dropdownBgColor: "gray",
+  };
 
   const initialValues = {
     firstName: "",
@@ -274,12 +277,15 @@ const Registration = ({ selectedUserId }: { selectedUserId: string }) => {
                     label="State"
                     width="15rem"
                   >
-                    <option style={{ backgroundColor: "gray" }} value="">
+                    <option
+                      style={{ backgroundColor: colorScheme.dropdownBgColor }}
+                      value=""
+                    >
                       &nbsp;
                     </option>
                     {stateAbbreviations.map((abbrev) => (
                       <option
-                        style={{ backgroundColor: "gray" }}
+                        style={{ backgroundColor: colorScheme.dropdownBgColor }}
                         value={abbrev}
                       >
                         {abbrev}
