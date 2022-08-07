@@ -15,6 +15,9 @@ import { useState } from "react";
 import NextImage from "next/image";
 
 const AuthForm = ({ mode }: { mode: any }) => {
+  console.log(screen.width);
+  console.log(screenX);
+  console.log(screenY);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -73,6 +76,7 @@ const AuthForm = ({ mode }: { mode: any }) => {
 
   return (
     <Box height="100vh" width="100vw" bg="grey" color="white">
+      {screen.width >= 768 ? console.log("large") : console.log("small")}
       <Flex
         justify="center"
         align="center"
